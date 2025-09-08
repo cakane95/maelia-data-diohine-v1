@@ -1,6 +1,9 @@
 # Ignorer les données traitées ou intermédiaires
 data/climat/processed/
 
+# Ignorer les CSV de données de sol intermédiaires
+data/sols/csv/processed/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -30,6 +30,22 @@ En raison des données disponibles pour la version actuelle, nous avons consolid
 7.  `dekk/mbel_cb_avec_arbr`
 8.  `dekk/mbel_cb_sans_arbr`
 
+### 2.1. Origine et Description du Parcellaire Enrichi
+
+Le fichier de base utilisé est `Parcellaire_Arbre_Carbone.shp`. Il s'agit d'une couche d'information géographique enrichie qui intègre l'influence des arbres (*Faidherbia albida*) au sein du parcellaire initial de Sasseme.
+
+Ce traitement géospatial complexe a été réalisé en amont par le géomaticien du projet, **M. Ousmane Faye**. Sa méthodologie a consisté à :
+1.  Cartographier les arbres de l'espèce *Faidherbia albida*.
+2.  Générer des **zones d'influence (tampons) de 17m de rayon** autour de chaque arbre.
+3.  **Fusionner** les zones d'influence qui se chevauchaient.
+4.  Intégrer ces nouvelles zones au parcellaire, en les distinguant via une colonne attributaire (`Arbre` = 1).
+
+Le rôle du notebook **`02a-creation-centroides.ipynb`** n'est donc pas de réaliser ce traitement, mais de lire ce fichier enrichi et de s'assurer que la géométrie de chaque entité est correctement interprétée pour l'étape d'échantillonnage. Il applique pour cela un **traitement différencié** :
+* Pour les **parcelles classiques** (`Arbre` == 0), il calcule le **centroïde** du polygone.
+* Pour les **zones d'influence des arbres** (`Arbre` == 1), il utilise les **coordonnées Long/Lat** de l'arbre d'origine.
+
+Ce processus garantit que chaque point d'échantillonnage final **(voir 3.3)** représente la localisation géographique la plus pertinente.
+
 ---
 
 ### 3. Étape 1 : Consolidation des Données Pédologiques
@@ -99,6 +115,16 @@ Le tableau ci-dessous présente la liste des variables nécessaires à la descri
 | `SAB[1–2]` | Teneur en sable (%) dans la couche *n*. |
 | `HCC[1–2]` | Humidité volumique à la capacité au champ (%) dans la couche *n*. |
 | `HPFP[1–2]` | Humidité volumique au point de flétrissement (%) dans la croche *n*. |
+
+### 3.5. Provenance des Données
+
+La table ci-dessous détaille l'origine des données utilisées pour construire les variables requises par MAELIA.
+
+| Variable MAELIA | Sources Principales | Traitement / Auteurs |
+| :--- | :--- | :--- |
+| `ZONE_PEDO` | 1. `Parcellaire_Arbre_Carbone.shp` <br> 2. `malou_0_30.csv` | Combinaison des attributs (`TYP_SOL`, `Arbre`, `Type_champ`) pour créer l'identifiant unique. <br> *(Sources: M. Ousmane Faye & Thèse O. Malou)* |
+
+*(Note : Ce tableau sera complété au fur et à mesure que les autres variables pédologiques (ARG, SAB, MO, etc.) seront extraites et traitées.)*
 
 ---
 
