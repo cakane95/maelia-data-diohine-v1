@@ -118,13 +118,17 @@ Le tableau ci-dessous présente la liste des variables nécessaires à la descri
 
 ### 3.5. Provenance des Données
 
-La table ci-dessous détaille l'origine des données utilisées pour construire les variables requises par MAELIA.
+La table ci-dessous détaille l'origine de chaque donnée utilisée pour construire les variables requises par MAELIA.
 
 | Variable MAELIA | Sources Principales | Traitement / Auteurs |
 | :--- | :--- | :--- |
-| `ZONE_PEDO` | 1. `Parcellaire_Arbre_Carbone.shp` <br> 2. `malou_0_30.csv` | Combinaison des attributs (`TYP_SOL`, `Arbre`, `Type_champ`) pour créer l'identifiant unique. <br> *(Sources: M. Ousmane Faye & Thèse O. Malou)* |
+| `ZONE_PEDO` | 1. `Parcellaire_Arbre_Carbone.shp` <br> 2. `malou_0_30.csv` | Combinaison des attributs pour créer l'identifiant. <br> *(Sources: M. John Doe & Thèse O. Malou)* |
+| `ARG1`, `ARG2` | [OpenLandMap 0-30cm](https://zenodo.org/records/15528401/files/clay.tot_iso.11277.2020.wpct_m_120m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250523.tif) <br> [OpenLandMap 30-60cm](https://zenodo.org/records/15528405/files/clay.tot_iso.11277.2020.wpct_m_120m_b30cm..60cm_20200101_20221231_g_epsg.4326_v20250523.tif) | Extraction par centroïdes (notebook `02b`). |
+| `SAB1`, `SAB2` | [OpenLandMap 0-30cm](https://zenodo.org/records/15528413/files/sand.tot_iso.11277.2020.wpct_m_120m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250523.tif) <br> [OpenLandMap 30-60cm](https://zenodo.org/records/15528417/files/sand.tot_iso.11277.2020.wpct_m_120m_b30cm..60cm_20200101_20221231_g_epsg.4326_v20250523.tif) | Extraction par centroïdes (notebook `02b`). |
+| `DAH1`, `DAH2` | [OpenLandMap 0-30cm](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/bd.core_iso.11272.2017.g.cm3_m_30m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250524.tif) <br> [OpenLandMap 30-60cm](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/bd.core_iso.11272.2017.g.cm3_m_30m_b30cm..60cm_20200101_20221231_g_epsg.4326_v20250204.tif) | Extraction par centroïdes et conversion d'unités (kg/m³ → g/cm³). |
+| `MO1`, `MO2` | [OpenLandMap 0-30cm](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/oc_iso.10694.1995.wpml_m_30m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250204.tif) <br> [OpenLandMap 30-60cm](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/oc_iso.10694.1995.wpml_m_30m_b30cm..60cm_20200101_20221231_g_epsg.4326_v20250204.tif) | Calculée à partir du Carbone Organique (facteur 1,724). |
 
-*(Note : Ce tableau sera complété au fur et à mesure que les autres variables pédologiques (ARG, SAB, MO, etc.) seront extraites et traitées.)*
+*(Note : Ce tableau sera complété au fur et à mesure que les autres variables seront extraites et traitées.)*
 
 ---
 
