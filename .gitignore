@@ -4,6 +4,9 @@ data/climat/processed/
 # Ignorer les CSV de données de sol intermédiaires
 data/sols/csv/processed/
 
+# Ignorer les fichiers raster bruts (téléchargés)
+data/sols/raster/raw/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
