@@ -132,6 +132,9 @@ La table ci-dessous détaille l'origine de chaque donnée utilisée pour constru
 | `MO1`, `MO2` | [OpenLandMap 0-30cm](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/oc_iso.10694.1995.wpml_m_30m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250204.tif) <br> [OpenLandMap 30-60cm](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/oc_iso.10694.1995.wpml_m_30m_b30cm..60cm_20200101_20221231_g_epsg.4326_v20250204.tif) | Calculée à partir du Carbone Organique (facteur 1,724). |
 | `N1`, `N2` | [iSDA Africa Raster](https://isdasoil.s3.amazonaws.com/soil_data/nitrogen_total/nitrogen_total.tif) | Facteur d'échelle (/100) et calcul pro-rata pour harmoniser les horizons. |
 | `PH1`, `PH2` | iSDA Africa (API) | Requêtes API par point et calcul pro-rata pour harmoniser les horizons. |
+| `HCC1`, `HCC2` | [Cirad Dataverse](https://doi.org/10.18167/DVN1/SGNSII) | Extraction et calcul pro-rata. |
+| `HPFP1`, `HPFP2`| [Cirad Dataverse](https://doi.org/10.18167/DVN1/SGNSII) | Extraction et calcul pro-rata. |
+| `RUPRH1`, `RUPRH2`| Calculée | `(HCC - HPFP) * épaisseur`. |
 
 *(Note : Ce tableau sera complété au fur et à mesure que les autres variables seront extraites et traitées.)*
 
