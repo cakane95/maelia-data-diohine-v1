@@ -123,9 +123,16 @@ La table ci-dessous détaille l'origine de chaque donnée utilisée pour constru
 | Variable MAELIA | Sources Principales | Traitement / Auteurs |
 | :--- | :--- | :--- |
 | **Identifiants** | | |
-| `ZONE_PEDO` | 1. `Parcellaire_Arbre_Carbone.shp` <br> 2. `malou_0_30.csv` | Combinaison d'attributs pour créer l'identifiant. <br> *(Sources: M. John Doe & Thèse O. Malou)* |
-| **Variables Globales** | | *(À compléter)* |
+| `ZONE_PEDO` | 1. `Parcellaire_Arbre_Carbone.shp` <br> 2. `malou_0_30.csv` | Combinaison d'attributs pour créer l'identifiant. <br> *(Sources: O. Faye & Thèse O. Malou)* |
+| `ID_ZH` | Dire d'expert | Valeur fixe `'SSM1'` (notebook `02c`). |
+| `STU_DOM` | `ZONE_PEDO` | Classification ('sableux'/'argileux') (notebook `02c`). |
+| `ID_SOL`| Calculée | Combinaison des identifiants (notebook `02c`). |
+| **Variables Globales** | | |
+| `PIRM` | Thèse de Waly Faye | Estimations basées sur des hypothèses (notebook `02c`). |
+| `PRO` | Hypothèse de modélisation | Valeur fixe `60` cm (notebook `02c`). |
+| `CSTRU` | Dire d'expert | Valeur fixe `0.5` (notebook `02c`). |
 | **Variables par Couche** | | |
+| `P1`, `P2` | Hypothèse de modélisation | Valeurs fixes `30` et `60` cm (notebook `02c`). |
 | `ARG1`, `ARG2` | [OpenLandMap](https://zenodo.org/records/15528401) | Extraction par centroïdes (notebook `02b`). |
 | `SAB1`, `SAB2` | [OpenLandMap](https://zenodo.org/records/15528413) | Extraction par centroïdes (notebook `02b`). |
 | `DAH1`, `DAH2` | [OpenLandMap](https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/bd.core_iso.11272.2017.g.cm3_m_30m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250204.tif) | Extraction et correction du facteur d'échelle (**`/100`**). |
@@ -134,10 +141,12 @@ La table ci-dessous détaille l'origine de chaque donnée utilisée pour constru
 | `N1`, `N2` | [iSDA Africa Raster](https://isdasoil.s3.amazonaws.com/soil_data/nitrogen_total/nitrogen_total.tif) | Correction d'échelle (**`/100`**) et harmonisation pro-rata. |
 | `CN1`, `CN2` | Calculée | `C (g/kg) / N (g/kg)`. |
 | `PH1`, `PH2` | iSDA Africa (API) | Requêtes API et harmonisation pro-rata. |
-| `HCC1`, `HCC2` | [Cirad Dataverse](https://doi.org/10.18167/DVN1/SGNSII) | Extraction (en fraction) et harmonisation pro-rata, puis conversion en **%**. |
-| `HPFP1`, `HPFP2`| [Cirad Dataverse](https://doi.org/10.18167/DVN1/SGNSII) | Extraction (en fraction) et harmonisation pro-rata, puis conversion en **%**. |
+| `HCC1`, `HCC2` | [Cirad Dataverse](https://doi.org/10.18167/DVN1/SGNSII) | Extraction (fraction), harmonisation pro-rata, puis conversion en **%**. |
+| `HPFP1`, `HPFP2`| [Cirad Dataverse](https://doi.org/10.18167/DVN1/SGNSII) | Extraction (fraction), harmonisation pro-rata, puis conversion en **%**. |
 | `RUPRH1`, `RUPRH2`| Calculée | `(HCC_fraction - HPFP_fraction) * épaisseur`. |
-
+| `KSAT1`, `KSAT2`| Thèse de Waly Faye | Estimations et répartition par couche (notebook `02c`). |
+| `EG1`, `EG2` | Dire d'expert | Valeur fixe `0` (notebook `02c`). |
+| `CAL1`, `CAL2` | Dire d'expert | Valeur fixe `0` (notebook `02c`). |
 ---
 
 ### 4. Étape 2 : Spatialisation et Attribution des Propriétés
