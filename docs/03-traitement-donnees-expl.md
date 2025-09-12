@@ -26,3 +26,10 @@ Un type d'exploitant est défini pour chaque agriculteur en se basant sur la col
 ## 4. Résultat Final
 
 Le fichier de sortie `exploitations.csv` est une table de correspondance contenant deux colonnes : **`ID_EXPL`** (l'identifiant standardisé nouvellement créé) et **`TYPE_EXPL`**. Chaque ligne correspond à un exploitant unique.
+
+### 5. Création du Fichier Matériel (`materiel.csv`)
+
+Le fichier `materiel.csv` liste les équipements d'irrigation disponibles pour les exploitants. Pour le territoire de Sasseme, il n'y a **pas de matériel d'irrigation** utilisé.
+
+Par conséquent, un fichier `materiel.csv` est créé contenant uniquement la ligne d'en-tête requise par MAELIA, avec la première colonne vide :
+`;SIJ (ha/jr);travail (h/jr)`
