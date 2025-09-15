@@ -10,6 +10,9 @@ data/sols/raster/raw/
 # Ignorer les shapefiles traités ou intermédiaires
 data/sols/shapefiles/processed/
 
+# Ignorer le dossier des fichiers de distribution
+dist/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
