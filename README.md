@@ -56,31 +56,64 @@ Vérifier la conformité de tous les fichiers d'entrée. Une fois le processus v
 
 Les détails sur les exigences et les erreurs courantes sont disponibles dans la [Documentation](docs/).
 
-## ☑️ Checklist des Données Finales
-Voici la liste des fichiers à produire et à placer dans le dossier /includes_SassemeV1.
+### ☑️ Checklist des Données Finales
+
+
 
 ### 📂 modeleAgricole/
-- [ ] parcelles.shp
 
-- [ ] ilots.shp
+* **📂 agriculteurs/**
 
-- [ ] exploitations.csv
+  - [x] `exploitations.csv`
 
-- [ ] especesCultivees.csv
+  - [x] `materiel.csv`
 
-- [ ] reglesDeDecision.csv
+* **📂 ilots/**
 
-- [ ] reglesDeDecisionFertilisation.csv
+  * **📂 dansZone/**
 
-- [ ] materiel.csv
+    - [x] `ilots.shp`
+
+    - [ ] `parcelles.shp`
+
+* **📂 culture/**
+
+  - [ ] `especesCultivees.csv`
+
+  - [ ] `reglesDeDecision.csv`
+
+  - [ ] `reglesDeDecisionFertilisation.csv`
+
+* **📂 Engrais/**
+
+  - [ ] `Engrais.csv`
+
+
 
 ### 📂 modeleCommun/
-- [ ] joursParMois.csv
 
-- [ ] polygonesMeteoFrance.shp
+* **📂 meteo/**
 
-- [ ] typeDeSolParZH.shp
+  - [x] `polygoneMeteoFrance.shp`
 
-- [ ] Fichiers météo par année (2015.csv, 2016.csv, etc.)
+  * **📂 observee/**
+
+    - [x] Fichiers météo par année
+
+* **📂 typesDeSol/**
+
+  - [x] `typeDeSolParZH.shp`
+
+* **📂 date/**
+
+- [ ] `joursParMois.csv`
+
+
+
+### 📂 modeleHydrographique/
+
+* **📂 zonesHydrographiques/**
+
+  - [x] `ZH.shp`
 
 ---
