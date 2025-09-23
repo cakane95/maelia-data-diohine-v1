@@ -1,0 +1,68 @@
+# Table of Contents (_toc.yml)
+format: jb-book
+root: docs/intro
+parts:
+  - caption: Module Commun
+    chapters:
+    - file: docs/01-traitement-donnees-climat.md
+      title: Données Climatiques
+    - file: docs/05-traitement-polygone-meteo.md
+      title: Méthodologie - Polygone Météo
+    - file: notebooks/05-creation-polygone-meteo.ipynb
+      title: Notebook - Création du Polygone Météo
+    - file: docs/02-traitement-donnees-sols.md
+      title: Méthodologie - Sols
+    - file: notebooks/02a-creation-centroides.ipynb
+      title: Notebook - Préparation des Points d'Échantillonnage
+    - file: notebooks/02b-extraction-agregation-donnees.ipynb
+      title: Notebook - Extraction & Agrégation
+    - file: notebooks/02c-ajout-donnees-expertes.ipynb
+      title: Notebook - Ajout des Données Expertes
+    - file: notebooks/02d-creation-parcellaire-enrichi.ipynb
+      title: Notebook - Création du Parcellaire Enrichi
+    - file: notebooks/02e-consolidation-finale.ipynb
+      title: Notebook - Consolidation du Shapefile Final
+    - file: docs/07-traitement-joursParMois.md
+      title: Méthodologie - Jours par Mois
+    - file: notebooks/07-copie-joursParMois.ipynb
+      title: Notebook - Copie de joursParMois.csv
+  - caption: Module Agricole
+    chapters:
+    - file: docs/03-traitement-donnees-expl.md
+      title: Méthodologie - Exploitations
+    - file: notebooks/03-creation-exploitations.ipynb
+      title: Notebook - Création de exploitations.csv
+    - file: docs/04-traitement-donnees-ilots.md
+      title: Méthodologie - Îlots
+    - file: notebooks/04-creation-ilots.ipynb
+      title: Notebook - Création de ilots.shp
+    - file: docs/12-traitement-donnees-parcelles.md
+      title: Méthodologie - Parcelles
+    - file: notebooks/12-creation-parcelles.ipynb
+      title: Notebook - Création de parcelles.shp
+    - file: docs/08-traitement-donnees-engrais.md
+      title: Méthodologie - Engrais
+    - file: notebooks/08-copie-engrais.ipynb
+      title: Notebook - Copie de Engrais.csv
+    - file: docs/10-traitement-regles-decision.md
+      title: Méthodologie - Règles de Décision
+    - file: notebooks/10-creation-regles-decision.ipynb
+      title: Notebook - Création des Règles de Décision
+    - file: docs/11-traitement-regles-ferti.md
+      title: Méthodologie - Règles de Fertilisation
+    - file: notebooks/11-creation-regles-ferti.ipynb
+      title: Notebook - Création des Règles de Fertilisation
+  - caption: Module Hydrographique
+    chapters:
+    - file: docs/06-traitement-zone-hydro.md
+      title: Méthodologie - Zone Hydrographique
+    - file: notebooks/06-creation-zh.ipynb
+      title: Notebook - Création de ZH.shp
+    - file: docs/09-traitement-contour-zh.md
+      title: Méthodologie - Contour ZH
+    - file: notebooks/09-creation-contour-zh.ipynb
+      title: Notebook - Création de contourZH.shp
+  - caption: Utilitaires
+    chapters:
+    - file: docs/13-utilitaires.md
+      title: Scripts Utilitaires

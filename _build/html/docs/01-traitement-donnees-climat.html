@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Données climatiques brutes – Tour à flux de SOB &#8212; Instanciation MAELIA - Territoire de Sasseme (Diohine)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/01-traitement-donnees-climat';</script>
+    <link rel="icon" href="../_static/LogoFairCarbon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Création du Fichier du Polygone Météo (polygoneMeteoFrance.shp)" href="05-traitement-polygone-meteo.html" />
+    <link rel="prev" title="Introduction : Instanciation du Territoire de Diohine" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/LogoFairCarbon.png" class="logo__image only-light" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>
+    <script>document.write(`<img src="../_static/LogoFairCarbon.png" class="logo__image only-dark" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction : Instanciation du Territoire de Diohine
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Commun</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Données Climatiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-traitement-polygone-meteo.html">Méthodologie - Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/05-creation-polygone-meteo.html">Notebook - Création du Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-traitement-donnees-sols.html">Méthodologie - Sols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02a-creation-centroides.html">Notebook - Préparation des Points d'Échantillonnage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02b-extraction-agregation-donnees.html">Notebook - Extraction &amp; Agrégation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02c-ajout-donnees-expertes.html">Notebook - Ajout des Données Expertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02d-creation-parcellaire-enrichi.html">Notebook - Création du Parcellaire Enrichi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02e-consolidation-finale.html">Notebook - Consolidation du Shapefile Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-traitement-joursParMois.html">1. Objectif</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/07-copie-joursParMois.html">Notebook - Copie de joursParMois.csv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Agricole</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="03-traitement-donnees-expl.html">Méthodologie - Exploitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/03-creation-exploitations.html">Notebook - Création de exploitations.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-traitement-donnees-ilots.html">Méthodologie - Îlots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/04-creation-ilots.html">Notebook - Création de ilots.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-traitement-donnees-parcelles.html">Méthodologie - Parcelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/12-creation-parcelles.html">Notebook - Création de parcelles.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-traitement-donnees-engrais.html">Méthodologie - Engrais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/08-copie-engrais.html">Notebook - Copie de Engrais.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-traitement-regles-decision.html">Méthodologie - Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/10-creation-regles-decision.html">Notebook - Création des Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-traitement-regles-ferti.html">Méthodologie - Règles de Fertilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/11-creation-regles-ferti.html">Notebook - Création des Règles de Fertilisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Hydrographique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06-traitement-zone-hydro.html">Méthodologie - Zone Hydrographique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/06-creation-zh.html">Notebook - Création de ZH.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-traitement-contour-zh.html">Méthodologie - Contour ZH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/09-creation-contour-zh.html">Notebook - Création de contourZH.shp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilitaires</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13-utilitaires.html">Scripts Utilitaires</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/01-traitement-donnees-climat.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Données climatiques brutes – Tour à flux de SOB</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origine-et-periode-des-donnees">1. Origine et période des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-generale-du-fichier">2. Description générale du fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-du-fichier">3. Structure du fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colonnes-cles">4. Colonnes clés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-prevu-pour-maelia">5. Traitement prévu pour MAELIA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#justification-des-agregations">6. Justification des agrégations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-de-traitement">7. Étapes de traitement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarque-importante-sur-les-precipitations">8. Remarque importante sur les précipitations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-du-rayonnement-net">9. Conversion du rayonnement net</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-letp-avec-la-formule-penman-monteith-fao-56">10. Calcul de l’ETP avec la formule Penman-Monteith (FAO-56)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres-utilises">Paramètres utilisés :</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">11. Références</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="donnees-climatiques-brutes-tour-a-flux-de-sob">
+<h1>Données climatiques brutes – Tour à flux de SOB<a class="headerlink" href="#donnees-climatiques-brutes-tour-a-flux-de-sob" title="Link to this heading">#</a></h1>
+<section id="origine-et-periode-des-donnees">
+<h2>1. Origine et période des données<a class="headerlink" href="#origine-et-periode-des-donnees" title="Link to this heading">#</a></h2>
+<p>Les données analysées proviennent de la tour à flux installée à Niakhar (station SOB), fournies par Olivier Roupsard (CIRAD).  
+Elles couvrent la période de <strong>2018 à 2024</strong> et sont enregistrées toutes les <strong>30 minutes</strong> par une instrumentation automatisée multi-capteurs.</p>
+</section>
+<hr class="docutils" />
+<section id="description-generale-du-fichier">
+<h2>2. Description générale du fichier<a class="headerlink" href="#description-generale-du-fichier" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Nom du fichier source :</strong> <code class="docutils literal notranslate"><span class="pre">donnees_station_SOB.xlsx</span></code></p></li>
+<li><p><strong>Format :</strong> Fichier Excel structuré manuellement avec en-têtes multiples</p></li>
+<li><p><strong>Objectif :</strong> Préparer ces données pour un usage dans MAELIA au format journalier</p></li>
+</ul>
+<p><strong>Remarque :</strong> La première colonne (sans nom) sert uniquement d’aide visuelle dans le fichier source et est ignorée lors du traitement.</p>
+</section>
+<hr class="docutils" />
+<section id="structure-du-fichier">
+<h2>3. Structure du fichier<a class="headerlink" href="#structure-du-fichier" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ligne</p></th>
+<th class="head"><p>Contenu</p></th>
+<th class="head"><p>À utiliser</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1 à 8</p></td>
+<td><p>Métadonnées (instruments, logiciel, qualité, etc.)</p></td>
+<td><p>Non</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Libellés lisibles (ex. Ta (°C), PREC (mm hh-1))</p></td>
+<td><p>Non</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Noms techniques des colonnes</p></td>
+<td><p>Oui</p></td>
+</tr>
+<tr class="row-odd"><td><p>11+</p></td>
+<td><p>Données toutes les 30 minutes</p></td>
+<td><p>Oui</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="colonnes-cles">
+<h2>4. Colonnes clés<a class="headerlink" href="#colonnes-cles" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Colonne technique</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Unité</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TIME_START</p></td>
+<td><p>Horodatage de début de mesure</p></td>
+<td><p>YYYYMMDDhhmm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Air_Temperature_at_2_m</p></td>
+<td><p>Température de l’air à 2 mètres</p></td>
+<td><p>°C</p></td>
+</tr>
+<tr class="row-even"><td><p>Precipitation</p></td>
+<td><p>Précipitations toutes les 30 min (×2)</p></td>
+<td><p>mm/h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Net_radiation_1</p></td>
+<td><p>Rayonnement net instantané</p></td>
+<td><p>W/m²</p></td>
+</tr>
+<tr class="row-even"><td><p>Relative_Humidity</p></td>
+<td><p>Humidité relative</p></td>
+<td><p>%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wind_Speed</p></td>
+<td><p>Vitesse du vent</p></td>
+<td><p>m/s</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="traitement-prevu-pour-maelia">
+<h2>5. Traitement prévu pour MAELIA<a class="headerlink" href="#traitement-prevu-pour-maelia" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Colonne MAELIA</p></th>
+<th class="head text-left"><p>Source technique</p></th>
+<th class="head text-left"><p>Traitement appliqué</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>DATE</strong></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TIME_START</span></code></p></td>
+<td class="text-left"><p>Extraction de la date (format <strong>JJ/MM/AAAA</strong>)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>RRmm</strong></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Precipitation</span></code></p></td>
+<td class="text-left"><p>Somme journalière après correction</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Tmin / Tmax</strong></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Air_Temperature_at_2_m</span></code></p></td>
+<td class="text-left"><p>Min / max journaliers</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>RGI</strong></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Net_radiation_1</span></code></p></td>
+<td class="text-left"><p>Somme des conversions 30 min (MJ/m²/j).<br><em>Note : La variable RGI dans MAELIA correspond ici au <strong>rayonnement net journalier</strong> et non au rayonnement solaire global.</em></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>ETP</strong></p></td>
+<td class="text-left"><p>Calculée</p></td>
+<td class="text-left"><p>Formule journalière Penman-Monteith FAO</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>ID_PDG</strong></p></td>
+<td class="text-left"><p>Ajouté par le script</p></td>
+<td class="text-left"><p><strong>Ajouté par le script avec une valeur fixe de 1</strong> (station centrale unique)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="justification-des-agregations">
+<h2>6. Justification des agrégations<a class="headerlink" href="#justification-des-agregations" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Précipitations :</strong> cumulées sur 24 h après correction (voir section 8)</p></li>
+<li><p><strong>Températures :</strong> min et max extraits des mesures 30 min</p></li>
+<li><p><strong>Rayonnement net :</strong> converti en énergie reçue toutes les 30 min (MJ/m²/30min), puis agrégé</p></li>
+<li><p><strong>ETP :</strong> calculée à partir des moyennes journalières selon Penman-Monteith</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="etapes-de-traitement">
+<h2>7. Étapes de traitement<a class="headerlink" href="#etapes-de-traitement" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Chargement des données à partir de la ligne 10</p></li>
+<li><p>Conversion de <code class="docutils literal notranslate"><span class="pre">TIME_START</span></code> en objet <code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p>Correction de la précipitation (division par 2)</p></li>
+<li><p>Conversion de <code class="docutils literal notranslate"><span class="pre">Net_radiation_1</span></code> en MJ/m²/30min, puis cumul par jour</p></li>
+<li><p>Agrégation journalière des variables climatiques</p></li>
+<li><p>Calcul de l’ETP journalière avec la formule FAO-56 Penman-Monteith</p></li>
+<li><p>Export des résultats au format MAELIA (<code class="docutils literal notranslate"><span class="pre">DATE</span></code>, <code class="docutils literal notranslate"><span class="pre">RRmm</span></code>, <code class="docutils literal notranslate"><span class="pre">Tmin</span></code>, <code class="docutils literal notranslate"><span class="pre">Tmax</span></code>, <code class="docutils literal notranslate"><span class="pre">ETP</span></code>, <code class="docutils literal notranslate"><span class="pre">RGI</span></code>)</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="remarque-importante-sur-les-precipitations">
+<h2>8. Remarque importante sur les précipitations<a class="headerlink" href="#remarque-importante-sur-les-precipitations" title="Link to this heading">#</a></h2>
+<p>Les précipitations ont été initialement exprimées en <strong>mm/h</strong>, issues de mesures toutes les 30 minutes <strong>multipliées par 2</strong>.</p>
+<p><strong>Correction appliquée :</strong></p>
+<ul class="simple">
+<li><p>Chaque valeur a été <strong>divisée par 2</strong> pour retrouver le cumul réel sur 30 minutes</p></li>
+<li><p>Ensuite, la <strong>somme journalière</strong> est calculée pour obtenir <code class="docutils literal notranslate"><span class="pre">RRmm</span></code></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="conversion-du-rayonnement-net">
+<h2>9. Conversion du rayonnement net<a class="headerlink" href="#conversion-du-rayonnement-net" title="Link to this heading">#</a></h2>
+<p>Le rayonnement net est fourni en <strong>W/m²</strong> (puissance instantanée). Pour obtenir l’énergie reçue pendant chaque intervalle de 30 minutes, on applique :</p>
+<p>[
+\text{Net_radiation_1 (MJ/m²/30min)} = \text{Net_radiation_1 (W/m²)} \times \frac{1800}{1,000,000} = \text{Net_radiation_1} \times 0.0018
+]</p>
+<p>Ces valeurs sont ensuite <strong>sommées par jour</strong> pour produire <code class="docutils literal notranslate"><span class="pre">RGI</span></code> (rayonnement global intégré en MJ/m²/jour).</p>
+</section>
+<hr class="docutils" />
+<section id="calcul-de-letp-avec-la-formule-penman-monteith-fao-56">
+<h2>10. Calcul de l’ETP avec la formule Penman-Monteith (FAO-56)<a class="headerlink" href="#calcul-de-letp-avec-la-formule-penman-monteith-fao-56" title="Link to this heading">#</a></h2>
+<p>L’évapotranspiration potentielle journalière est estimée selon la formule de Penman-Monteith présentée dans le guide FAO-56 et reprise dans la littérature francophone (voir référence ci-dessous).</p>
+<p>[
+ET_0 = \frac{0.408 \cdot \Delta \cdot R_n + \gamma \cdot \frac{900}{T + 273} \cdot u_2 \cdot (e_s - e_a)}{\Delta + \gamma (1 + 0.34 \cdot u_2)}
+]</p>
+<section id="parametres-utilises">
+<h3>Paramètres utilisés :<a class="headerlink" href="#parametres-utilises" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbole</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Unité</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>( R_n )</p></td>
+<td><p>Rayonnement net journalier</p></td>
+<td><p>MJ/m²/jour</p></td>
+</tr>
+<tr class="row-odd"><td><p>( T )</p></td>
+<td><p>Température moyenne journalière</p></td>
+<td><p>°C</p></td>
+</tr>
+<tr class="row-even"><td><p>( u_2 )</p></td>
+<td><p>Vitesse du vent à 2 m</p></td>
+<td><p>m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>( e_s )</p></td>
+<td><p>Pression de vapeur saturante</p></td>
+<td><p>kPa</p></td>
+</tr>
+<tr class="row-even"><td><p>( e_a )</p></td>
+<td><p>Pression de vapeur réelle (via RH)</p></td>
+<td><p>kPa</p></td>
+</tr>
+<tr class="row-odd"><td><p>( \Delta )</p></td>
+<td><p>Pente de la courbe de saturation</p></td>
+<td><p>kPa/°C</p></td>
+</tr>
+<tr class="row-even"><td><p>( \gamma )</p></td>
+<td><p>Constante psychrométrique</p></td>
+<td><p>kPa/°C</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p>Cette formule est appliquée <strong>à partir de moyennes et cumuls journaliers</strong>. Elle ne nécessite pas d’adaptation au pas de temps car tous les termes sont agrégés avant calcul.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h2>11. Références<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Djikou, T. (2006). <em>Estimation de l’évapotranspiration potentielle dans le bassin du Haut Bani (Mali) à partir des données météorologiques.</em>  
+  Mémoire de Master, Université de Ouagadougou – AMMA-CATCH.  
+  <a class="reference external" href="https://amma-catch.osug.fr/IMG/pdf/memoire_djikou_06.pdf">https://amma-catch.osug.fr/IMG/pdf/memoire_djikou_06.pdf</a></p></li>
+<li><p>Allen, R. G., Pereira, L. S., Raes, D., &amp; Smith, M. (1998).  
+  <em>Crop evapotranspiration – Guidelines for computing crop water requirements – FAO Irrigation and Drainage Paper 56.</em> FAO, Rome.</p></li>
+</ul>
+<hr class="docutils" />
+<p>Ce document sera mis à jour si des modifications interviennent dans la méthode de traitement.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction : Instanciation du Territoire de Diohine</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-traitement-polygone-meteo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Création du Fichier du Polygone Météo (<code class="docutils literal notranslate"><span class="pre">polygoneMeteoFrance.shp</span></code>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origine-et-periode-des-donnees">1. Origine et période des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-generale-du-fichier">2. Description générale du fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-du-fichier">3. Structure du fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colonnes-cles">4. Colonnes clés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-prevu-pour-maelia">5. Traitement prévu pour MAELIA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#justification-des-agregations">6. Justification des agrégations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-de-traitement">7. Étapes de traitement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarque-importante-sur-les-precipitations">8. Remarque importante sur les précipitations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-du-rayonnement-net">9. Conversion du rayonnement net</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-letp-avec-la-formule-penman-monteith-fao-56">10. Calcul de l’ETP avec la formule Penman-Monteith (FAO-56)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres-utilises">Paramètres utilisés :</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">11. Références</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cheikhou Akhmed Kane
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

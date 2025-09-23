@@ -1,0 +1,16 @@
+# Book settings
+title: Instanciation MAELIA - Territoire de Sasseme (Diohine)
+author: Cheikhou Akhmed Kane
+copyright: "2025"
+logo: "LogoFairCarbon.png" # Chemin vers le logo, entre guillemets
+
+# HTML-specific settings
+html:
+  favicon: "LogoFairCarbon.png" # Chemin vers le favicon, entre guillemets
+
+# Configuration de l'exécution
+execute:
+  execute_notebooks: "off"  # Ne PAS exécuter le code
+
+# Ne construire que les fichiers listés dans la table des matières
+only_build_toc_files: true

@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mise en place reglesDeDecisions_fertilisation.csv &#8212; Instanciation MAELIA - Territoire de Sasseme (Diohine)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/11-creation-regles-ferti';</script>
+    <link rel="icon" href="../_static/LogoFairCarbon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Création du Fichier de la Zone Hydrographique (ZH.shp)" href="../docs/06-traitement-zone-hydro.html" />
+    <link rel="prev" title="Création des Règles de Fertilisation (reglesDeDecisions_fertilisation.csv)" href="../docs/11-traitement-regles-ferti.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../docs/intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/LogoFairCarbon.png" class="logo__image only-light" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>
+    <script>document.write(`<img src="../_static/LogoFairCarbon.png" class="logo__image only-dark" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../docs/intro.html">
+                    Introduction : Instanciation du Territoire de Diohine
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Commun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/01-traitement-donnees-climat.html">Données Climatiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/05-traitement-polygone-meteo.html">Méthodologie - Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-creation-polygone-meteo.html">Notebook - Création du Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/02-traitement-donnees-sols.html">Méthodologie - Sols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02a-creation-centroides.html">Notebook - Préparation des Points d'Échantillonnage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02b-extraction-agregation-donnees.html">Notebook - Extraction &amp; Agrégation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02c-ajout-donnees-expertes.html">Notebook - Ajout des Données Expertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02d-creation-parcellaire-enrichi.html">Notebook - Création du Parcellaire Enrichi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02e-consolidation-finale.html">Notebook - Consolidation du Shapefile Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/07-traitement-joursParMois.html">1. Objectif</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="07-copie-joursParMois.html">Notebook - Copie de joursParMois.csv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Agricole</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/03-traitement-donnees-expl.html">Méthodologie - Exploitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-creation-exploitations.html">Notebook - Création de exploitations.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/04-traitement-donnees-ilots.html">Méthodologie - Îlots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-creation-ilots.html">Notebook - Création de ilots.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/12-traitement-donnees-parcelles.html">Méthodologie - Parcelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-creation-parcelles.html">Notebook - Création de parcelles.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/08-traitement-donnees-engrais.html">Méthodologie - Engrais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-copie-engrais.html">Notebook - Copie de Engrais.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/10-traitement-regles-decision.html">Méthodologie - Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-creation-regles-decision.html">Notebook - Création des Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/11-traitement-regles-ferti.html">Méthodologie - Règles de Fertilisation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook - Création des Règles de Fertilisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Hydrographique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/06-traitement-zone-hydro.html">Méthodologie - Zone Hydrographique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-creation-zh.html">Notebook - Création de ZH.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/09-traitement-contour-zh.html">Méthodologie - Contour ZH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-creation-contour-zh.html">Notebook - Création de contourZH.shp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilitaires</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/13-utilitaires.html">Scripts Utilitaires</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/11-creation-regles-ferti.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mise en place reglesDeDecisions_fertilisation.csv</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Auteur(s)</strong> : Cheikhou Akhmed KANE</p>
+<p><strong>Description</strong> : Mise en place <code class="docutils literal notranslate"><span class="pre">reglesDeDecisions_fertilisation.csv</span></code></p>
+<section class="tex2jax_ignore mathjax_ignore" id="mise-en-place-reglesdedecisions-fertilisation-csv">
+<h1>Mise en place <code class="docutils literal notranslate"><span class="pre">reglesDeDecisions_fertilisation.csv</span></code><a class="headerlink" href="#mise-en-place-reglesdedecisions-fertilisation-csv" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+
+<span class="c1"># Fichier en entrée</span>
+<span class="n">input_regles_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;ITK&quot;</span> <span class="o">/</span> <span class="s2">&quot;csv&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span> <span class="o">/</span> <span class="s2">&quot;reglesDeDecisions_fertilisation.csv&quot;</span>
+
+<span class="c1"># Fichier en sortie</span>
+<span class="n">output_ferti_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;includes_sassemeV1&quot;</span> <span class="o">/</span> <span class="s2">&quot;modeleAgricole&quot;</span> <span class="o">/</span> <span class="s2">&quot;culture&quot;</span> <span class="o">/</span> <span class="s2">&quot;reglesDeDecisions_fertilisation.csv&quot;</span>
+
+<span class="c1"># Liste de nos 6 ITK cibles</span>
+<span class="n">itk_sasseme</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;arachide_precMil&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;arachide_precJachere&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;jachere_precMil&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;jachere_precArachide&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mil_precArachide&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mil_precMil&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">df_source</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_regles_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Fichier source des règles de fertilisation chargé avec succès.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚨 ERREUR lors du chargement du fichier : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Fichier source des règles de fertilisation chargé avec succès.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On garde les 2 premières colonnes de base et on ajoute nos 6 ITK</span>
+<span class="n">colonnes_base</span> <span class="o">=</span> <span class="n">df_source</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">df_sasseme_ferti</span> <span class="o">=</span> <span class="n">df_source</span><span class="p">[</span><span class="n">colonnes_base</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">itk</span> <span class="ow">in</span> <span class="n">itk_sasseme</span><span class="p">:</span>
+    <span class="n">df_sasseme_ferti</span><span class="p">[</span><span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span> <span class="c1"># On initialise tout à NA par défaut</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Structure du nouveau DataFrame créée.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Structure du nouveau DataFrame créée.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dictionnaire des paramètres fixes à appliquer</span>
+<span class="n">parametres_ferti</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;FERTIALT_NOM_ALTERNATIVE&#39;</span><span class="p">:</span> <span class="s1">&#39;fertilisation minerale&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_ORDRE_ALTERNATIVE&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_ORDRE_APPORT&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_NOM_PRODUIT&#39;</span><span class="p">:</span> <span class="s1">&#39;NPK&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_DOSE&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_DOSE_P&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_DOSE_K&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_PROF_WSOL&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_AGRIW&#39;</span><span class="p">:</span> <span class="s1">&#39;oui&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_OUTIL&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_TPS_TRAVAIL&#39;</span><span class="p">:</span> <span class="mf">0.0625</span><span class="p">,</span> <span class="c1"># 2 jours/ha converti en ha/h</span>
+    <span class="s1">&#39;FERTIALT_N_PASSAGES&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_OT_SIMULTANEE&#39;</span><span class="p">:</span> <span class="s1">&#39;NA&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_N_SOUS_PERIODES&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;FERTIALT_DEBUT&#39;</span><span class="p">:</span> <span class="mi">166</span><span class="p">,</span> <span class="c1"># 15 Juin</span>
+    <span class="s1">&#39;FERTIALT_FIN&#39;</span><span class="p">:</span> <span class="mi">242</span>   <span class="c1"># 30 Août</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Appliquer les valeurs à nos 6 colonnes d&#39;ITK</span>
+<span class="k">for</span> <span class="n">parametre</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">parametres_ferti</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">df_sasseme_ferti</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_sasseme_ferti</span><span class="p">[</span><span class="s1">&#39;FERTIALT_NOM_ITK&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">parametre</span><span class="p">,</span> <span class="n">itk_sasseme</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeur</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Paramètres de fertilisation spécifiques appliqués.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Paramètres de fertilisation spécifiques appliqués.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">df_sasseme_ferti</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FERTIALT_NOM_ITK</th>
+      <th>Unnamed: 1</th>
+      <th>arachide_precMil</th>
+      <th>arachide_precJachere</th>
+      <th>jachere_precMil</th>
+      <th>jachere_precArachide</th>
+      <th>mil_precArachide</th>
+      <th>mil_precMil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FERTIALT_NOM_ALTERNATIVE</td>
+      <td>NaN</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FERTIALT_ORDRE_ALTERNATIVE</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FERTIALT_ORDRE_APPORT</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FERTIALT_NOM_PRODUIT</td>
+      <td>NaN</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FERTIALT_DOSE</td>
+      <td>DOSE</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>FERTIALT_DOSE_P</td>
+      <td>DOSE_P</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>FERTIALT_DOSE_K</td>
+      <td>DOSE_K</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>FERTIALT_PROF_WSOL</td>
+      <td>EFFET_RUs</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>FERTIALT_AGRIW</td>
+      <td>NaN</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>FERTIALT_OUTIL</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>FERTIALT_TPS_TRAVAIL</td>
+      <td>TEMPS</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>FERTIALT_N_PASSAGES</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>FERTIALT_OT_SIMULTANEE</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>FERTIALT_N_SOUS_PERIODES</td>
+      <td>NB_SOUS_PERIODES</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>FERTIALT_DEBUT</td>
+      <td>DEBUT</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>FERTIALT_FIN</td>
+      <td>FIN</td>
+      <td>242</td>
+      <td>242</td>
+      <td>242</td>
+      <td>242</td>
+      <td>242</td>
+      <td>242</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>FERTIALT_HUM_MAX_SOL</td>
+      <td>HUMIDITE_SOL_MAX</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>FERTIALT_N_J_CUMUL_PLUIE</td>
+      <td>JOURS_PLUIE</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>FERTIALT_CUMUL_PLUIE</td>
+      <td>HAUTEURS_PLUIE_MAX</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>FERTIALT_N_J_CUMUL_PLUIE_EVA</td>
+      <td>JOURS_P-ETP</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>FERTIALT_CUMUL_PLUIE_EVA</td>
+      <td>P-ETP_MAX</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>FERTIALT_N_J_CUMUL_TEMP_MIN</td>
+      <td>JOURS_TMIN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>FERTIALT_TEMP_MIN</td>
+      <td>TMIN_MIN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>FERTIALT_N_J_CUMUL_TEMP_MAX</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>FERTIALT_TEMP_MAX</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>FERTIALT_N_J_CUMUL_TEMP_MAX_INF</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>FERTIALT_TEMP_MAX_INF</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>FERTIALT_SEUIL_VEGE</td>
+      <td>ECHV_MIN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>FERTIALT_SEUIL_VEGE_PRE</td>
+      <td>ECHV_DEBUT</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>FERTIALT_SEUIL_VEGE_POST</td>
+      <td>ECHV_FIN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>FERTIALT_N_J_CUMUL_PLUIE_PREVUE</td>
+      <td>JOURS_PLUIE_PREVUES</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>FERTIALT_CUMUL_PLUIE_PREVUE</td>
+      <td>HAUTEURS_PLUIE_PREVUES</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>FERTIALT_N_J_CUMUL_HYGROMETRIE_MIN</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>FERTIALT_HYGROMETRIE_MIN</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>FERTIALT_HAUTEUR_AU_MOINS_CUMUL_PLUIES_PREVUES</td>
+      <td>HAUTEUR_AU_PLUS_CUMUL_PLUIES_PREVUES</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>FERTIALT_NJ_AU_MOINS_CUMUL_PLUIES_PREVUES</td>
+      <td>NJ_AU_PLUS_CUMUL_PLUIES_PREVUES</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output_ferti_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_sasseme_ferti</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_ferti_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Fichier &#39;reglesDeDecisions_fertilisation.csv&#39; sauvegardé dans :</span><span class="se">\n</span><span class="s2">   </span><span class="si">{</span><span class="n">output_ferti_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Fichier &#39;reglesDeDecisions_fertilisation.csv&#39; sauvegardé dans :
+   C:\Users\Cheikhou\Desktop\Ferlo_Sine\maelia-data-diohine-v1\includes_sassemeV1\modeleAgricole\culture\reglesDeDecisions_fertilisation.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu du fichier final :&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_sasseme_ferti</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aperçu du fichier final :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FERTIALT_NOM_ITK</th>
+      <th>Unnamed: 1</th>
+      <th>arachide_precMil</th>
+      <th>arachide_precJachere</th>
+      <th>jachere_precMil</th>
+      <th>jachere_precArachide</th>
+      <th>mil_precArachide</th>
+      <th>mil_precMil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FERTIALT_NOM_ALTERNATIVE</td>
+      <td>NaN</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+      <td>fertilisation minerale</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FERTIALT_ORDRE_ALTERNATIVE</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FERTIALT_ORDRE_APPORT</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FERTIALT_NOM_PRODUIT</td>
+      <td>NaN</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+      <td>NPK</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FERTIALT_DOSE</td>
+      <td>DOSE</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>FERTIALT_DOSE_P</td>
+      <td>DOSE_P</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>FERTIALT_DOSE_K</td>
+      <td>DOSE_K</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>FERTIALT_PROF_WSOL</td>
+      <td>EFFET_RUs</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>FERTIALT_AGRIW</td>
+      <td>NaN</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+      <td>oui</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>FERTIALT_OUTIL</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>FERTIALT_TPS_TRAVAIL</td>
+      <td>TEMPS</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+      <td>0.0625</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>FERTIALT_N_PASSAGES</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>FERTIALT_OT_SIMULTANEE</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>FERTIALT_N_SOUS_PERIODES</td>
+      <td>NB_SOUS_PERIODES</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>FERTIALT_DEBUT</td>
+      <td>DEBUT</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+      <td>166</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../docs/11-traitement-regles-ferti.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Création des Règles de Fertilisation (<code class="docutils literal notranslate"><span class="pre">reglesDeDecisions_fertilisation.csv</span></code>)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../docs/06-traitement-zone-hydro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Création du Fichier de la Zone Hydrographique (<code class="docutils literal notranslate"><span class="pre">ZH.shp</span></code>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cheikhou Akhmed Kane
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

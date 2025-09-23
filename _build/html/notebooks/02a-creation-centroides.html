@@ -1,0 +1,1811 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Création du Fichier typeDeSolParZH.shp : Points de collecte &#8212; Instanciation MAELIA - Territoire de Sasseme (Diohine)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02a-creation-centroides';</script>
+    <link rel="icon" href="../_static/LogoFairCarbon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Création du Fichier typeDeSolParZH.shp : Extraction des donnees" href="02b-extraction-agregation-donnees.html" />
+    <link rel="prev" title="Méthodologie de Caractérisation des Sols pour l’Instanciation MAELIA" href="../docs/02-traitement-donnees-sols.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../docs/intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/LogoFairCarbon.png" class="logo__image only-light" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>
+    <script>document.write(`<img src="../_static/LogoFairCarbon.png" class="logo__image only-dark" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../docs/intro.html">
+                    Introduction : Instanciation du Territoire de Diohine
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Commun</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/01-traitement-donnees-climat.html">Données Climatiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/05-traitement-polygone-meteo.html">Méthodologie - Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-creation-polygone-meteo.html">Notebook - Création du Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/02-traitement-donnees-sols.html">Méthodologie - Sols</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook - Préparation des Points d'Échantillonnage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02b-extraction-agregation-donnees.html">Notebook - Extraction &amp; Agrégation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02c-ajout-donnees-expertes.html">Notebook - Ajout des Données Expertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02d-creation-parcellaire-enrichi.html">Notebook - Création du Parcellaire Enrichi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02e-consolidation-finale.html">Notebook - Consolidation du Shapefile Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/07-traitement-joursParMois.html">1. Objectif</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="07-copie-joursParMois.html">Notebook - Copie de joursParMois.csv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Agricole</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/03-traitement-donnees-expl.html">Méthodologie - Exploitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-creation-exploitations.html">Notebook - Création de exploitations.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/04-traitement-donnees-ilots.html">Méthodologie - Îlots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-creation-ilots.html">Notebook - Création de ilots.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/12-traitement-donnees-parcelles.html">Méthodologie - Parcelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-creation-parcelles.html">Notebook - Création de parcelles.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/08-traitement-donnees-engrais.html">Méthodologie - Engrais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-copie-engrais.html">Notebook - Copie de Engrais.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/10-traitement-regles-decision.html">Méthodologie - Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-creation-regles-decision.html">Notebook - Création des Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/11-traitement-regles-ferti.html">Méthodologie - Règles de Fertilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-creation-regles-ferti.html">Notebook - Création des Règles de Fertilisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Hydrographique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/06-traitement-zone-hydro.html">Méthodologie - Zone Hydrographique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-creation-zh.html">Notebook - Création de ZH.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/09-traitement-contour-zh.html">Méthodologie - Contour ZH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-creation-contour-zh.html">Notebook - Création de contourZH.shp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilitaires</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/13-utilitaires.html">Scripts Utilitaires</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/02a-creation-centroides.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Création du Fichier typeDeSolParZH.shp : Points de collecte</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-du-projet">1. Description du projet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">2. Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree-et-en-sortie">3. Fichiers en Entrée et en Sortie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree">3.1. Fichiers en Entrée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-en-sortie">3.2. Fichier en Sortie</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Auteur(s)</strong> : Cheikhou Akhmed KANE</p>
+<p><strong>Description</strong> : Préparation des points de collecte de donnees sols pour les parcelles avec arbres</p>
+<section class="tex2jax_ignore mathjax_ignore" id="creation-du-fichier-typedesolparzh-shp-points-de-collecte">
+<h1>Création du Fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> : Points de collecte<a class="headerlink" href="#creation-du-fichier-typedesolparzh-shp-points-de-collecte" title="Link to this heading">#</a></h1>
+<section id="description-du-projet">
+<h2>1. Description du projet<a class="headerlink" href="#description-du-projet" title="Link to this heading">#</a></h2>
+<p>Ce notebook est la première étape du traitement des données de sol. Son rôle est de préparer une liste propre et géolocalisée de <strong>points d’échantillonnage</strong> à partir du parcellaire enrichi. Il s’assure que chaque point (qu’il représente une zone d’influence d’arbre ou une parcelle classique) possède la géométrie la plus pertinente et est enrichi avec les informations de classification initiales (type de sol, type de champ, présence d’arbre).</p>
+</section>
+<hr class="docutils" />
+<section id="objectifs">
+<h2>2. Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Charger</strong> le parcellaire enrichi (<code class="docutils literal notranslate"><span class="pre">.shp</span></code>) et le fichier CSV contenant le type de champ.</p></li>
+<li><p><strong>Nettoyer</strong> les données en gérant les doublons et les non-concordances.</p></li>
+<li><p><strong>Fusionner</strong> les deux sources de données via une jointure.</p></li>
+<li><p><strong>Créer</strong> une couche de points unifiée en appliquant un <strong>traitement géométrique différencié</strong> (coordonnées réelles pour les arbres, centroïdes pour les parcelles).</p></li>
+<li><p><strong>Construire</strong> la variable de classification finale <strong><code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code></strong>.</p></li>
+<li><p><strong>Exporter</strong> la liste finale des points d’échantillonnage au format CSV pour le notebook suivant.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="fichiers-en-entree-et-en-sortie">
+<h2>3. Fichiers en Entrée et en Sortie<a class="headerlink" href="#fichiers-en-entree-et-en-sortie" title="Link to this heading">#</a></h2>
+<section id="fichiers-en-entree">
+<h3>3.1. Fichiers en Entrée<a class="headerlink" href="#fichiers-en-entree" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Parcellaire Enrichi :</strong> <code class="docutils literal notranslate"><span class="pre">data/sols/shapefiles/raw/Parcellaire_Arbre_Carbone.shp</span></code></p></li>
+<li><p><strong>Type de Champ :</strong> <code class="docutils literal notranslate"><span class="pre">data/sols/csv/raw/malou_0_30.csv</span></code></p></li>
+</ul>
+</section>
+<section id="fichier-en-sortie">
+<h3>3.2. Fichier en Sortie<a class="headerlink" href="#fichier-en-sortie" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Points d’échantillonnage :</strong> <code class="docutils literal notranslate"><span class="pre">data/sols/csv/processed/points_échantillonnage_complets.csv</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Définition du chemin de base du projet</span>
+<span class="n">base_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+
+<span class="c1"># Chemin vers le shapefile AVEC arbres</span>
+<span class="n">shp_input_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;sols&quot;</span> <span class="o">/</span> <span class="s2">&quot;shapefiles&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span> <span class="o">/</span> <span class="s2">&quot;Parcellaire_Arbre_Carbone.shp&quot;</span>
+
+<span class="c1"># Chemin pour le fichier CSV de sortie final</span>
+<span class="n">output_points_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;sols&quot;</span> <span class="o">/</span> <span class="s2">&quot;csv&quot;</span> <span class="o">/</span> <span class="s2">&quot;processed&quot;</span> <span class="o">/</span> <span class="s2">&quot;points_echantillonnage_complets.csv&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Chemin du fichier d&#39;entrée : </span><span class="si">{</span><span class="n">shp_input_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chemin du fichier d&#39;entrée : C:\Users\Cheikhou\Desktop\Ferlo_Sine\maelia-data-diohine-v1\data\sols\shapefiles\raw\Parcellaire_Arbre_Carbone.shp
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ----------------- CHARGEMENT ----------------- #</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Charger le shapefile dans un GeoDataFrame</span>
+    <span class="n">gdf_parcelles</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shp_input_path</span><span class="p">)</span>
+    
+    <span class="c1"># Afficher un message de succès et des informations sur le DataFrame</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Fichier &#39;</span><span class="si">{</span><span class="n">shp_input_path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; chargé avec succès.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Dimensions du tableau (lignes, colonnes) : </span><span class="si">{</span><span class="n">gdf_parcelles</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Nombre de parcelles (lignes) : </span><span class="si">{</span><span class="n">gdf_parcelles</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Nombre d&#39;attributs (colonnes) : </span><span class="si">{</span><span class="n">gdf_parcelles</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu des 5 premières lignes :&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">gdf_parcelles</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+    <span class="c1"># --- LIGNES AJOUTÉES --- #</span>
+    <span class="c1"># Vérifier que la colonne &#39;Arbre&#39; existe avant de l&#39;utiliser</span>
+    <span class="k">if</span> <span class="s1">&#39;Arbre&#39;</span> <span class="ow">in</span> <span class="n">gdf_parcelles</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Statistiques pour la colonne &#39;Arbre&#39; :&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Compter le nombre d&#39;occurrences de chaque valeur (0 et 1)</span>
+        <span class="n">comptage_arbres</span> <span class="o">=</span> <span class="n">gdf_parcelles</span><span class="p">[</span><span class="s1">&#39;Arbre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">comptage_arbres</span><span class="p">)</span>
+        
+        <span class="c1"># Afficher spécifiquement le nombre de parcelles sans arbres</span>
+        <span class="n">nombre_sans_arbre</span> <span class="o">=</span> <span class="n">comptage_arbres</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># .get(0, 0) pour éviter une erreur si aucune parcelle n&#39;a la valeur 0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">   Nombre de parcelles SANS arbre (&#39;Arbre&#39; == 0) : </span><span class="si">{</span><span class="n">nombre_sans_arbre</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">❌ ATTENTION : La colonne &#39;Arbre&#39; est manquante, impossible de faire le décompte.&quot;</span><span class="p">)</span>
+    <span class="c1"># ------------------------- #</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ERREUR lors du chargement du fichier : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Fichier &#39;Parcellaire_Arbre_Carbone.shp&#39; chargé avec succès.
+   Dimensions du tableau (lignes, colonnes) : (751, 29)
+   Nombre de parcelles (lignes) : 751
+   Nombre d&#39;attributs (colonnes) : 29
+
+Aperçu des 5 premières lignes :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>N°_PARCEL</th>
+      <th>N°_FOYER</th>
+      <th>SAISON</th>
+      <th>NOM_UTILIS</th>
+      <th>NOM_PROPRI</th>
+      <th>UTL_2012</th>
+      <th>NOM_CHAMPS</th>
+      <th>DIST_ENQ</th>
+      <th>DIST_CARTO</th>
+      <th>...</th>
+      <th>Surface_Ar</th>
+      <th>Dist_Centr</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+      <th>Stock_C</th>
+      <th>StockC_0_3</th>
+      <th>parcel_id</th>
+      <th>Surface__1</th>
+      <th>Dist_Cen_1</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>147.0</td>
+      <td>15.0</td>
+      <td>1.0</td>
+      <td>Marie DIOUF</td>
+      <td>Marie DIOUF</td>
+      <td>0.0</td>
+      <td>Pifind</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>226.463297</td>
+      <td>48.373962</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+      <td>9.22</td>
+      <td>17.44</td>
+      <td>b7698961-a77b-4fb2-8c94-2f090c1d6fd2</td>
+      <td>3181.224210</td>
+      <td>17.652819</td>
+      <td>MULTIPOLYGON (((337434.305 1603598.415, 337435...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>147.0</td>
+      <td>15.0</td>
+      <td>1.0</td>
+      <td>Marie DIOUF</td>
+      <td>Marie DIOUF</td>
+      <td>0.0</td>
+      <td>Pifind</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+      <td>9.22</td>
+      <td>17.44</td>
+      <td>c6c85252-0ee6-44b2-97bf-99724c6dd923</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>POLYGON ((337438.043 1603638.866, 337438.614 1...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>149.0</td>
+      <td>15.0</td>
+      <td>1.0</td>
+      <td>Marie DIOUF</td>
+      <td>Marie DIOUF</td>
+      <td>0.0</td>
+      <td>Ngolsima</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>171.266369</td>
+      <td>51.310047</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+      <td>6.60</td>
+      <td>10.45</td>
+      <td>dae3c8e5-9f33-4354-826d-aed699b6c17c</td>
+      <td>1045.516931</td>
+      <td>46.730772</td>
+      <td>MULTIPOLYGON (((336159.144 1603477.128, 336160...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>149.0</td>
+      <td>15.0</td>
+      <td>1.0</td>
+      <td>Marie DIOUF</td>
+      <td>Marie DIOUF</td>
+      <td>0.0</td>
+      <td>Ngolsima</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+      <td>6.60</td>
+      <td>10.45</td>
+      <td>c33f3753-34ef-4b61-ba17-3cc4fe29bbd3</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>POLYGON ((336165.254 1603521.577, 336167.671 1...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>150.0</td>
+      <td>15.0</td>
+      <td>1.0</td>
+      <td>Marie DIOUF</td>
+      <td>Marie DIOUF</td>
+      <td>0.0</td>
+      <td>Maygueran</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>874.964689</td>
+      <td>60.283415</td>
+      <td>336302.866304</td>
+      <td>1.603039e+06</td>
+      <td>6.44</td>
+      <td>9.38</td>
+      <td>e85b0517-6fda-4422-95a3-571360932f23</td>
+      <td>2503.005594</td>
+      <td>8.629949</td>
+      <td>MULTIPOLYGON (((336335.234 1602955.393, 336334...</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 29 columns</p>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Statistiques pour la colonne &#39;Arbre&#39; :
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Arbre
+0    420
+1    331
+Name: count, dtype: int64
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Nombre de parcelles SANS arbre (&#39;Arbre&#39; == 0) : 420
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Liste des colonnes que vous souhaitez conserver</span>
+<span class="n">colonnes_a_garder</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;parcel_id&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;N°_PARCEL&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;TYP_SOL&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Arbre&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Long&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Lat&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;X_Centroid&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Y_Centroid&#39;</span>
+<span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Création d&#39;un nouveau DataFrame avec uniquement ces colonnes</span>
+    <span class="n">df_selection</span> <span class="o">=</span> <span class="n">gdf_parcelles</span><span class="p">[</span><span class="n">colonnes_a_garder</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Sélection des colonnes effectuée avec succès !&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># --- LIGNE AJOUTÉE --- #</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Le nouveau DataFrame contient </span><span class="si">{</span><span class="n">df_selection</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> lignes et </span><span class="si">{</span><span class="n">df_selection</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> colonnes.&quot;</span><span class="p">)</span>
+    <span class="c1"># --------------------- #</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu du nouveau DataFrame (5 premières lignes) :&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">df_selection</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+    <span class="c1"># --- LIGNES AJOUTÉES --- #</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu de 5 parcelles avec Arbre == 1 : 🌳&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">df_selection</span><span class="p">[</span><span class="n">df_selection</span><span class="p">[</span><span class="s1">&#39;Arbre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+    <span class="c1"># ------------------------- #</span>
+
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERREUR : Le DataFrame &#39;gdf_parcelles&#39; n&#39;a pas été trouvé.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ERREUR : La colonne </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> est introuvable dans le fichier.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Veuillez vérifier le nom exact des colonnes. Voici la liste des colonnes disponibles :&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gdf_parcelles</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Sélection des colonnes effectuée avec succès !
+   Le nouveau DataFrame contient 751 lignes et 8 colonnes.
+
+Aperçu du nouveau DataFrame (5 premières lignes) :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>parcel_id</th>
+      <th>N°_PARCEL</th>
+      <th>TYP_SOL</th>
+      <th>Arbre</th>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b7698961-a77b-4fb2-8c94-2f090c1d6fd2</td>
+      <td>147.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>337382.976620</td>
+      <td>1.603607e+06</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>c6c85252-0ee6-44b2-97bf-99724c6dd923</td>
+      <td>147.0</td>
+      <td>Dior</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dae3c8e5-9f33-4354-826d-aed699b6c17c</td>
+      <td>149.0</td>
+      <td>Dekk</td>
+      <td>1</td>
+      <td>336145.755091</td>
+      <td>1.603489e+06</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>c33f3753-34ef-4b61-ba17-3cc4fe29bbd3</td>
+      <td>149.0</td>
+      <td>Dekk</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e85b0517-6fda-4422-95a3-571360932f23</td>
+      <td>150.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336296.074335</td>
+      <td>1.603034e+06</td>
+      <td>336302.866304</td>
+      <td>1.603039e+06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aperçu de 5 parcelles avec Arbre == 1 : 🌳
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>parcel_id</th>
+      <th>N°_PARCEL</th>
+      <th>TYP_SOL</th>
+      <th>Arbre</th>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b7698961-a77b-4fb2-8c94-2f090c1d6fd2</td>
+      <td>147.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>337382.976620</td>
+      <td>1.603607e+06</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dae3c8e5-9f33-4354-826d-aed699b6c17c</td>
+      <td>149.0</td>
+      <td>Dekk</td>
+      <td>1</td>
+      <td>336145.755091</td>
+      <td>1.603489e+06</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e85b0517-6fda-4422-95a3-571360932f23</td>
+      <td>150.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336296.074335</td>
+      <td>1.603034e+06</td>
+      <td>336302.866304</td>
+      <td>1.603039e+06</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>d28eb822-617a-4498-acbf-4f919ee1e3ae</td>
+      <td>144.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>335917.410954</td>
+      <td>1.602738e+06</td>
+      <td>335886.039020</td>
+      <td>1.602729e+06</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2a2005cb-29a4-48bd-b7ad-fca2bc44db44</td>
+      <td>148.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336894.131809</td>
+      <td>1.603453e+06</td>
+      <td>336894.334621</td>
+      <td>1.603456e+06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre de lignes avant la suppression des doublons stricts : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_selection</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Supprimer les lignes qui sont des doublons sur l&#39;ensemble des colonnes</span>
+<span class="n">df_selection</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre de lignes après la suppression des doublons stricts : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_selection</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre de lignes avant la suppression des doublons stricts : 751
+Nombre de lignes après la suppression des doublons stricts : 751
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Cheikhou\AppData\Local\Temp\ipykernel_32936\812043785.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_selection.drop_duplicates(inplace=True)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sépare le DataFrame en deux selon la condition sur &quot;Arbre&quot;</span>
+<span class="n">df_arbres</span> <span class="o">=</span> <span class="n">df_selection</span><span class="p">[</span><span class="n">df_selection</span><span class="p">[</span><span class="s1">&#39;Arbre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_parcelles</span> <span class="o">=</span> <span class="n">df_selection</span><span class="p">[</span><span class="n">df_selection</span><span class="p">[</span><span class="s1">&#39;Arbre&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre de lignes avec &#39;Arbre&#39; == 1: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_arbres</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre de lignes pour les parcelles : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_parcelles</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre de lignes avec &#39;Arbre&#39; == 1: 331
+Nombre de lignes pour les parcelles : 420
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crée le GeoDataFrame pour les arbres</span>
+<span class="n">gdf_arbres</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">df_arbres</span><span class="p">,</span>
+    <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df_arbres</span><span class="o">.</span><span class="n">Long</span><span class="p">,</span> <span class="n">df_arbres</span><span class="o">.</span><span class="n">Lat</span><span class="p">),</span>
+    <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span>  <span class="c1"># Coordonnées WGS84</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;GeoDataFrame pour les arbres créé avec succès.&quot;</span><span class="p">)</span>
+<span class="n">gdf_arbres</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GeoDataFrame pour les arbres créé avec succès.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>parcel_id</th>
+      <th>N°_PARCEL</th>
+      <th>TYP_SOL</th>
+      <th>Arbre</th>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b7698961-a77b-4fb2-8c94-2f090c1d6fd2</td>
+      <td>147.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>337382.976620</td>
+      <td>1.603607e+06</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+      <td>POINT (337382.97662 1603607.33749)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dae3c8e5-9f33-4354-826d-aed699b6c17c</td>
+      <td>149.0</td>
+      <td>Dekk</td>
+      <td>1</td>
+      <td>336145.755091</td>
+      <td>1.603489e+06</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+      <td>POINT (336145.75509 1603488.98846)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e85b0517-6fda-4422-95a3-571360932f23</td>
+      <td>150.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336296.074335</td>
+      <td>1.603034e+06</td>
+      <td>336302.866304</td>
+      <td>1.603039e+06</td>
+      <td>POINT (336296.07434 1603033.94857)</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>d28eb822-617a-4498-acbf-4f919ee1e3ae</td>
+      <td>144.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>335917.410954</td>
+      <td>1.602738e+06</td>
+      <td>335886.039020</td>
+      <td>1.602729e+06</td>
+      <td>POINT (335917.41095 1602738.35263)</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2a2005cb-29a4-48bd-b7ad-fca2bc44db44</td>
+      <td>148.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336894.131809</td>
+      <td>1.603453e+06</td>
+      <td>336894.334621</td>
+      <td>1.603456e+06</td>
+      <td>POINT (336894.13181 1603453.182)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crée le GeoDataFrame pour les parcelles directement en WGS84</span>
+<span class="n">gdf_parcelles_wgs84</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">df_parcelles</span><span class="p">,</span>
+    <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df_parcelles</span><span class="o">.</span><span class="n">X_Centroid</span><span class="p">,</span> <span class="n">df_parcelles</span><span class="o">.</span><span class="n">Y_Centroid</span><span class="p">),</span>
+    <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;GeoDataFrame pour les parcelles créé avec succès (CRS: EPSG:4326).&quot;</span><span class="p">)</span>
+<span class="n">gdf_parcelles_wgs84</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GeoDataFrame pour les parcelles créé avec succès (CRS: EPSG:4326).
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>parcel_id</th>
+      <th>N°_PARCEL</th>
+      <th>TYP_SOL</th>
+      <th>Arbre</th>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>c6c85252-0ee6-44b2-97bf-99724c6dd923</td>
+      <td>147.0</td>
+      <td>Dior</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+      <td>POINT (337365.77398 1603611.29869)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>c33f3753-34ef-4b61-ba17-3cc4fe29bbd3</td>
+      <td>149.0</td>
+      <td>Dekk</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+      <td>POINT (336099.6533 1603496.62979)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9ae158c8-ed7a-49cc-a548-fa876a904d75</td>
+      <td>150.0</td>
+      <td>Dior</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>336302.866304</td>
+      <td>1.603039e+06</td>
+      <td>POINT (336302.8663 1603039.27258)</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>a50e70b5-39dd-4412-9c9a-66781e618fc3</td>
+      <td>144.0</td>
+      <td>Dior</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>335886.039020</td>
+      <td>1.602729e+06</td>
+      <td>POINT (335886.03902 1602728.63143)</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>19d5192e-6e55-4af6-a7e2-558755bfce85</td>
+      <td>143.0</td>
+      <td>Dior</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>336334.936817</td>
+      <td>1.603098e+06</td>
+      <td>POINT (336334.93682 1603098.02693)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gdf_arbres</span><span class="p">,</span> <span class="n">gdf_parcelles_wgs84</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Le GeoDataFrame final est maintenant le résultat (remplace l&#39;ancien gdf_wgs84)</span>
+<span class="n">gdf_wgs84</span> <span class="o">=</span> <span class="n">gdf_final</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fusion terminée avec succès !&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CRS final : </span><span class="si">{</span><span class="n">gdf_wgs84</span><span class="o">.</span><span class="n">crs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aperçu du GeoDataFrame final :&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">gdf_wgs84</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Nombre total de lignes : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_wgs84</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fusion terminée avec succès !
+CRS final : EPSG:4326
+Aperçu du GeoDataFrame final :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>parcel_id</th>
+      <th>N°_PARCEL</th>
+      <th>TYP_SOL</th>
+      <th>Arbre</th>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b7698961-a77b-4fb2-8c94-2f090c1d6fd2</td>
+      <td>147.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>337382.976620</td>
+      <td>1.603607e+06</td>
+      <td>337365.773977</td>
+      <td>1.603611e+06</td>
+      <td>POINT (337382.97662 1603607.33749)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dae3c8e5-9f33-4354-826d-aed699b6c17c</td>
+      <td>149.0</td>
+      <td>Dekk</td>
+      <td>1</td>
+      <td>336145.755091</td>
+      <td>1.603489e+06</td>
+      <td>336099.653300</td>
+      <td>1.603497e+06</td>
+      <td>POINT (336145.75509 1603488.98846)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>e85b0517-6fda-4422-95a3-571360932f23</td>
+      <td>150.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336296.074335</td>
+      <td>1.603034e+06</td>
+      <td>336302.866304</td>
+      <td>1.603039e+06</td>
+      <td>POINT (336296.07434 1603033.94857)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d28eb822-617a-4498-acbf-4f919ee1e3ae</td>
+      <td>144.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>335917.410954</td>
+      <td>1.602738e+06</td>
+      <td>335886.039020</td>
+      <td>1.602729e+06</td>
+      <td>POINT (335917.41095 1602738.35263)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2a2005cb-29a4-48bd-b7ad-fca2bc44db44</td>
+      <td>148.0</td>
+      <td>Dior</td>
+      <td>1</td>
+      <td>336894.131809</td>
+      <td>1.603453e+06</td>
+      <td>336894.334621</td>
+      <td>1.603456e+06</td>
+      <td>POINT (336894.13181 1603453.182)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre total de lignes : 751
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chemin vers le fichier contenant l&#39;information &#39;Type_champ&#39;</span>
+<span class="n">malou_csv_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;sols&quot;</span> <span class="o">/</span> <span class="s2">&quot;csv&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span> <span class="o">/</span> <span class="s2">&quot;malou_0_30.csv&quot;</span>
+
+<span class="c1"># Lecture du fichier CSV</span>
+<span class="n">df_malou</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">malou_csv_path</span><span class="p">)</span>
+
+<span class="c1"># On harmonise le nom de la colonne clé avant la jointure.</span>
+<span class="n">df_malou</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;N°_PARCELL&#39;</span><span class="p">:</span> <span class="s1">&#39;N°_PARCEL&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df_malou</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>X_Centroid</th>
+      <th>Y_Centroid</th>
+      <th>N°_PARCEL</th>
+      <th>N°_FOYER</th>
+      <th>SAISON</th>
+      <th>NOM_UTILIS</th>
+      <th>NOM_PROPRI</th>
+      <th>UTL_2012</th>
+      <th>NOM_CHAMPS</th>
+      <th>...</th>
+      <th>Epaisseur_(cm)</th>
+      <th>Superficie_(ha)</th>
+      <th>Da_(g/cm3)</th>
+      <th>Parcage</th>
+      <th>Couverture_sol</th>
+      <th>Antécédent_cultural</th>
+      <th>Termitère</th>
+      <th>Date</th>
+      <th>Saison</th>
+      <th>Kadd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>337391.020695</td>
+      <td>1.603426e+06</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Djimith FAYE</td>
+      <td>Djimith FAYE</td>
+      <td>0</td>
+      <td>Pifind</td>
+      <td>...</td>
+      <td>20</td>
+      <td>1,21</td>
+      <td>1,56</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>8/6/2016</td>
+      <td>SS</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>336914.113937</td>
+      <td>1.603585e+06</td>
+      <td>15</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Djimith FAYE</td>
+      <td>Djimith FAYE</td>
+      <td>0</td>
+      <td>Ngas nobenda</td>
+      <td>...</td>
+      <td>20</td>
+      <td>0,38</td>
+      <td>1,53</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>8/6/2016</td>
+      <td>SS</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>334144.139128</td>
+      <td>1.604236e+06</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Djimith FAYE</td>
+      <td>Djimith FAYE</td>
+      <td>0</td>
+      <td>Mbelpil 1</td>
+      <td>...</td>
+      <td>20</td>
+      <td>0,27</td>
+      <td>1,55</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>8/6/2016</td>
+      <td>SS</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>333691.240137</td>
+      <td>1.603836e+06</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Djimith FAYE</td>
+      <td>Djimith FAYE</td>
+      <td>0</td>
+      <td>Mbelpil 2 b</td>
+      <td>...</td>
+      <td>20</td>
+      <td>0,35</td>
+      <td>1,64</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>8/6/2016</td>
+      <td>SS</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>333675.819844</td>
+      <td>1.603783e+06</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Djimith FAYE</td>
+      <td>Djimith FAYE</td>
+      <td>0</td>
+      <td>Mbelpil 2 a</td>
+      <td>...</td>
+      <td>20</td>
+      <td>0,45</td>
+      <td>1,64</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>8/6/2016</td>
+      <td>SS</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 37 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- CORRECTION DES DONNÉES SOURCES ---</span>
+
+<span class="c1"># 1. Correction du doublon (Parcelle 192) dans df_malou</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Nettoyage de df_malou ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lignes avant suppression des doublons : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_malou</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">df_malou</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;N°_PARCEL&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lignes après suppression des doublons : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_malou</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># 2. Suppression de la parcelle 201 dans gdf_wgs84</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Nettoyage de gdf_wgs84 ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lignes avant suppression de la parcelle 201 : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_wgs84</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">gdf_wgs84</span> <span class="o">=</span> <span class="n">gdf_wgs84</span><span class="p">[</span><span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;N°_PARCEL&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">201</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lignes après suppression de la parcelle 201 : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_wgs84</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Nettoyage de df_malou ---
+Lignes avant suppression des doublons : 419
+Lignes après suppression des doublons : 418
+
+--- Nettoyage de gdf_wgs84 ---
+Lignes avant suppression de la parcelle 201 : 751
+Lignes après suppression de la parcelle 201 : 749
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isoler les colonnes utiles du fichier de M. Malou</span>
+<span class="n">df_type_champ</span> <span class="o">=</span> <span class="n">df_malou</span><span class="p">[[</span><span class="s1">&#39;N°_PARCEL&#39;</span><span class="p">,</span> <span class="s1">&#39;Type_champ&#39;</span><span class="p">]]</span>
+
+<span class="c1"># --- AVANT LA JOINTURE ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- AVANT LA JOINTURE ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dimensions de gdf_wgs84 : </span><span class="si">{</span><span class="n">gdf_wgs84</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> (lignes, colonnes)&quot;</span><span class="p">)</span>
+<span class="c1"># -------------------------</span>
+
+<span class="c1"># --- JOINTURE ---</span>
+<span class="n">gdf_wgs84</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">gdf_wgs84</span><span class="p">,</span>
+    <span class="n">df_type_champ</span><span class="p">,</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;N°_PARCEL&#39;</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+<span class="p">)</span>
+<span class="c1"># ----------------</span>
+
+<span class="c1"># --- APRÈS LA JOINTURE ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- APRÈS LA JOINTURE ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dimensions de gdf_wgs84 : </span><span class="si">{</span><span class="n">gdf_wgs84</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> (lignes, colonnes)&quot;</span><span class="p">)</span>
+<span class="c1"># -----------------------</span>
+
+<span class="c1"># --- VALIDATION ---</span>
+<span class="n">valeurs_manquantes</span> <span class="o">=</span> <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;Type_champ&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">valeurs_manquantes</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">👍 Validation réussie : Toutes les parcelles ont trouvé une correspondance.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🚨 ATTENTION : </span><span class="si">{</span><span class="n">valeurs_manquantes</span><span class="si">}</span><span class="s2"> parcelle(s) n&#39;ont pas trouvé de correspondance.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- AVANT LA JOINTURE ---
+Dimensions de gdf_wgs84 : (749, 9) (lignes, colonnes)
+
+--- APRÈS LA JOINTURE ---
+Dimensions de gdf_wgs84 : (749, 10) (lignes, colonnes)
+
+👍 Validation réussie : Toutes les parcelles ont trouvé une correspondance.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># On définit la présence d&#39;arbre (&#39;avec_arbr&#39; / &#39;sans_arbr&#39;) en se basant sur la colonne &#39;Arbre&#39;.</span>
+    <span class="n">presence_arbre</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;Arbre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;avec_arbr&#39;</span><span class="p">,</span> <span class="s1">&#39;sans_arbr&#39;</span><span class="p">)</span>
+
+    <span class="c1"># On s&#39;assure que les autres colonnes de classification sont de type texte pour éviter les erreurs.</span>
+    <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;TYP_SOL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;TYP_SOL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;Type_champ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;Type_champ&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+    <span class="c1"># On crée la colonne &#39;type_ilot&#39; en assemblant les bons composants.</span>
+    <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;type_ilot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;TYP_SOL&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span>
+        <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;Type_champ&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span>
+        <span class="n">presence_arbre</span>
+    <span class="p">)</span>
+
+    <span class="c1"># On convertit le résultat en minuscules pour la standardisation.</span>
+    <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;type_ilot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;type_ilot&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="c1"># --- LIGNE AJOUTÉE --- #</span>
+    <span class="c1"># On crée &#39;ZONE_PEDO&#39; comme copie conforme de &#39;type_ilot&#39;</span>
+    <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_wgs84</span><span class="p">[</span><span class="s1">&#39;type_ilot&#39;</span><span class="p">]</span>
+    <span class="c1"># --------------------- #</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Colonnes &#39;type_ilot&#39; et &#39;ZONE_PEDO&#39; créées avec succès.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># On affiche un aperçu pour vérifier la logique.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu des colonnes de classification :&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">gdf_wgs84</span><span class="p">[[</span><span class="s1">&#39;TYP_SOL&#39;</span><span class="p">,</span> <span class="s1">&#39;Type_champ&#39;</span><span class="p">,</span> <span class="s1">&#39;Arbre&#39;</span><span class="p">,</span> <span class="s1">&#39;type_ilot&#39;</span><span class="p">,</span> <span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERREUR : Le GeoDataFrame &#39;gdf_wgs84&#39; n&#39;a pas été trouvé.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ERREUR : La colonne </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> est introuvable.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Colonnes &#39;type_ilot&#39; et &#39;ZONE_PEDO&#39; créées avec succès.
+
+Aperçu des colonnes de classification :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TYP_SOL</th>
+      <th>Type_champ</th>
+      <th>Arbre</th>
+      <th>type_ilot</th>
+      <th>ZONE_PEDO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dior</td>
+      <td>CC</td>
+      <td>1</td>
+      <td>dior_cc_avec_arbr</td>
+      <td>dior_cc_avec_arbr</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Dekk</td>
+      <td>CB</td>
+      <td>1</td>
+      <td>dekk_cb_avec_arbr</td>
+      <td>dekk_cb_avec_arbr</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Dior</td>
+      <td>CB</td>
+      <td>1</td>
+      <td>dior_cb_avec_arbr</td>
+      <td>dior_cb_avec_arbr</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dior</td>
+      <td>CB</td>
+      <td>1</td>
+      <td>dior_cb_avec_arbr</td>
+      <td>dior_cb_avec_arbr</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dior</td>
+      <td>CB</td>
+      <td>1</td>
+      <td>dior_cb_avec_arbr</td>
+      <td>dior_cb_avec_arbr</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf_wgs84</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_points_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Données enregistrées dans : </span><span class="si">{</span><span class="n">output_points_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Données enregistrées dans : C:\Users\Cheikhou\Desktop\Ferlo_Sine\maelia-data-diohine-v1\data\sols\csv\processed\points_echantillonnage_complets.csv
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../docs/02-traitement-donnees-sols.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Méthodologie de Caractérisation des Sols pour l’Instanciation MAELIA</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02b-extraction-agregation-donnees.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Création du Fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> : Extraction des donnees</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-du-projet">1. Description du projet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">2. Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree-et-en-sortie">3. Fichiers en Entrée et en Sortie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree">3.1. Fichiers en Entrée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-en-sortie">3.2. Fichier en Sortie</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cheikhou Akhmed Kane
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

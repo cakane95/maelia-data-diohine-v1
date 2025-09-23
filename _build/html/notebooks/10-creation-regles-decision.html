@@ -1,0 +1,1626 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Création du Fichier de Règles de Décision &#8212; Instanciation MAELIA - Territoire de Sasseme (Diohine)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/10-creation-regles-decision';</script>
+    <link rel="icon" href="../_static/LogoFairCarbon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Création des Règles de Fertilisation (reglesDeDecisions_fertilisation.csv)" href="../docs/11-traitement-regles-ferti.html" />
+    <link rel="prev" title="Création des Fichiers de Règles de Décision" href="../docs/10-traitement-regles-decision.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../docs/intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/LogoFairCarbon.png" class="logo__image only-light" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>
+    <script>document.write(`<img src="../_static/LogoFairCarbon.png" class="logo__image only-dark" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../docs/intro.html">
+                    Introduction : Instanciation du Territoire de Diohine
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Commun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/01-traitement-donnees-climat.html">Données Climatiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/05-traitement-polygone-meteo.html">Méthodologie - Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-creation-polygone-meteo.html">Notebook - Création du Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/02-traitement-donnees-sols.html">Méthodologie - Sols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02a-creation-centroides.html">Notebook - Préparation des Points d'Échantillonnage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02b-extraction-agregation-donnees.html">Notebook - Extraction &amp; Agrégation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02c-ajout-donnees-expertes.html">Notebook - Ajout des Données Expertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02d-creation-parcellaire-enrichi.html">Notebook - Création du Parcellaire Enrichi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02e-consolidation-finale.html">Notebook - Consolidation du Shapefile Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/07-traitement-joursParMois.html">1. Objectif</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="07-copie-joursParMois.html">Notebook - Copie de joursParMois.csv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Agricole</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/03-traitement-donnees-expl.html">Méthodologie - Exploitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-creation-exploitations.html">Notebook - Création de exploitations.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/04-traitement-donnees-ilots.html">Méthodologie - Îlots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-creation-ilots.html">Notebook - Création de ilots.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/12-traitement-donnees-parcelles.html">Méthodologie - Parcelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-creation-parcelles.html">Notebook - Création de parcelles.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/08-traitement-donnees-engrais.html">Méthodologie - Engrais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-copie-engrais.html">Notebook - Copie de Engrais.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/10-traitement-regles-decision.html">Méthodologie - Règles de Décision</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook - Création des Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/11-traitement-regles-ferti.html">Méthodologie - Règles de Fertilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-creation-regles-ferti.html">Notebook - Création des Règles de Fertilisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Hydrographique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/06-traitement-zone-hydro.html">Méthodologie - Zone Hydrographique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-creation-zh.html">Notebook - Création de ZH.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/09-traitement-contour-zh.html">Méthodologie - Contour ZH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-creation-contour-zh.html">Notebook - Création de contourZH.shp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilitaires</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/13-utilitaires.html">Scripts Utilitaires</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/10-creation-regles-decision.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Création du Fichier de Règles de Décision</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-du-projet">1. Description du projet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">2. Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie">3. Méthodologie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree-et-en-sortie">4. Fichiers en Entrée et en Sortie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-en-entree">4.1. Fichier en Entrée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-sortie">4.2. Fichiers en Sortie</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Auteur(s)</strong> : Cheikhou Akhmed KANE</p>
+<p><strong>Description</strong> : Mise en place <code class="docutils literal notranslate"><span class="pre">reglesDeDecision.csv</span></code></p>
+<section class="tex2jax_ignore mathjax_ignore" id="creation-du-fichier-de-regles-de-decision">
+<h1>Création du Fichier de Règles de Décision<a class="headerlink" href="#creation-du-fichier-de-regles-de-decision" title="Link to this heading">#</a></h1>
+<section id="description-du-projet">
+<h2>1. Description du projet<a class="headerlink" href="#description-du-projet" title="Link to this heading">#</a></h2>
+<p>Ce notebook a pour objectif de générer le fichier <code class="docutils literal notranslate"><span class="pre">reglesDeDecisions.csv</span></code> pour le territoire de Sasseme.</p>
+<p>La méthode consiste à partir d’un fichier existant (<code class="docutils literal notranslate"><span class="pre">reglesDeDecisionsextended.csv</span></code>), à le simplifier en ne gardant que les 6 itinéraires techniques (ITK) pertinents, puis à paramétrer finement les opérations techniques (<code class="docutils literal notranslate"><span class="pre">PREPA</span></code>, <code class="docutils literal notranslate"><span class="pre">SEMIS</span></code>, <code class="docutils literal notranslate"><span class="pre">RECOLTE</span></code>) via un dictionnaire de configuration.</p>
+</section>
+<hr class="docutils" />
+<section id="objectifs">
+<h2>2. Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Charger le fichier de règles de décision source.</p></li>
+<li><p>Créer une nouvelle structure avec seulement 6 ITK.</p></li>
+<li><p>Remplir l’en-tête (12 premières lignes) pour définir ces 6 ITK.</p></li>
+<li><p>Initialiser toutes les opérations techniques à “désactivé” (<code class="docutils literal notranslate"><span class="pre">NA</span></code> ou <code class="docutils literal notranslate"><span class="pre">N</span></code>).</p></li>
+<li><p>Activer et paramétrer spécifiquement les opérations <code class="docutils literal notranslate"><span class="pre">PREPA</span></code>, <code class="docutils literal notranslate"><span class="pre">SEMIS</span></code> et <code class="docutils literal notranslate"><span class="pre">RECOLTE</span></code> à l’aide d’un dictionnaire.</p></li>
+<li><p>Sauvegarder les fichiers finaux.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="methodologie">
+<h2>3. Méthodologie<a class="headerlink" href="#methodologie" title="Link to this heading">#</a></h2>
+<p>Le processus est décomposé en plusieurs fonctions utilitaires pour plus de clarté et de reproductibilité :</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">creer_structure_itk()</span></code></strong> : Crée la “coquille” vide du DataFrame final, en conservant les 3 colonnes de description et en ajoutant 6 colonnes vides pour nos nouveaux ITK.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">ajouter_lignes_semis()</span></code></strong> : Vérifie la présence des paramètres de semis liés à la pluie et les ajoute au DataFrame si nécessaire pour garantir la robustesse du script.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">remplir_entete_itk()</span></code></strong> : Remplit les 12 premières lignes (l’en-tête) de chaque ITK en se basant sur les règles définies (ID de l’espèce, du précédent, etc.).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">initialiser_operations_a_na()</span></code></strong> : Crée une “page blanche” en désactivant par défaut toutes les opérations techniques (valeurs <code class="docutils literal notranslate"><span class="pre">NA</span></code> ou <code class="docutils literal notranslate"><span class="pre">N</span></code>) après l’en-tête.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">appliquer_parametres_specifiques()</span></code></strong> : Active et configure finement les opérations <code class="docutils literal notranslate"><span class="pre">PREPA</span></code>, <code class="docutils literal notranslate"><span class="pre">SEMIS</span></code>, et <code class="docutils literal notranslate"><span class="pre">RECOLTE</span></code> en appliquant les valeurs d’un dictionnaire de configuration.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="fichiers-en-entree-et-en-sortie">
+<h2>4. Fichiers en Entrée et en Sortie<a class="headerlink" href="#fichiers-en-entree-et-en-sortie" title="Link to this heading">#</a></h2>
+<section id="fichier-en-entree">
+<h3>4.1. Fichier en Entrée<a class="headerlink" href="#fichier-en-entree" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Règles de Décision (Source)</strong> : <code class="docutils literal notranslate"><span class="pre">data/ITK/csv/raw/reglesDeDecisionsextended.csv</span></code></p></li>
+</ul>
+</section>
+<section id="fichiers-en-sortie">
+<h3>4.2. Fichiers en Sortie<a class="headerlink" href="#fichiers-en-sortie" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Règles de Décision (Sasseme)</strong> : <code class="docutils literal notranslate"><span class="pre">includes_sassemeV1/modeleAgricole/culture/reglesDeDecisions.csv</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+
+<span class="c1"># Fichier en entrée</span>
+<span class="n">input_regles_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;ITK&quot;</span> <span class="o">/</span> <span class="s2">&quot;csv&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span> <span class="o">/</span> <span class="s2">&quot;reglesDeDecisionsextended.csv&quot;</span>
+
+<span class="c1"># Fichiers en sortie</span>
+<span class="n">output_regles_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;includes_sassemeV1&quot;</span> <span class="o">/</span> <span class="s2">&quot;modeleAgricole&quot;</span> <span class="o">/</span> <span class="s2">&quot;culture&quot;</span> <span class="o">/</span> <span class="s2">&quot;reglesDeDecision.csv&quot;</span>
+<span class="n">output_ferti_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;includes_sassemeV1&quot;</span> <span class="o">/</span> <span class="s2">&quot;modeleAgricole&quot;</span> <span class="o">/</span> <span class="s2">&quot;culture&quot;</span> <span class="o">/</span> <span class="s2">&quot;reglesDeDecisionFertilisation.csv&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Liste de nos 6 ITK cibles</span>
+<span class="n">itk_sasseme</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;arachide_precMil&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;arachide_precJachere&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;jachere_precMil&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;jachere_precArachide&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mil_precArachide&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mil_precMil&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">df_source</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_regles_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Fichier source des règles de décision chargé avec succès.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; Contient </span><span class="si">{</span><span class="n">df_source</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> règles et </span><span class="si">{</span><span class="n">df_source</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> colonnes (ITK).&quot;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚨 ERREUR : Fichier non trouvé. Vérifiez le chemin : </span><span class="si">{</span><span class="n">input_regles_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚨 Une erreur est survenue : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Fichier source des règles de décision chargé avec succès.
+   -&gt; Contient 270 règles et 89 colonnes (ITK).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">creer_structure_itk</span><span class="p">(</span><span class="n">df_source</span><span class="p">,</span> <span class="n">nouvelle_liste_itk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Crée un nouveau DataFrame avec les 3 colonnes de base spécifiées</span>
+<span class="sd">    et de nouvelles colonnes vides pour une liste d&#39;ITK donnée.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df_source (pd.DataFrame): Le DataFrame original des règles de décision.</span>
+<span class="sd">        nouvelle_liste_itk (list): La liste des noms pour les nouveaux ITK.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Le nouveau DataFrame avec la structure cible.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. Définir et garder les 3 colonnes de base exactes</span>
+    <span class="n">colonnes_base</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NOM_ITK_AFFICHAGE&quot;</span><span class="p">,</span> <span class="s2">&quot;X.&quot;</span><span class="p">,</span> <span class="s2">&quot;gel&quot;</span><span class="p">]</span>
+    <span class="n">df_cible</span> <span class="o">=</span> <span class="n">df_source</span><span class="p">[</span><span class="n">colonnes_base</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># 2. Ajouter les nouvelles colonnes d&#39;ITK (vides)</span>
+    <span class="k">for</span> <span class="n">itk</span> <span class="ow">in</span> <span class="n">nouvelle_liste_itk</span><span class="p">:</span>
+        <span class="n">df_cible</span><span class="p">[</span><span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Structure du nouveau DataFrame créée avec succès.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_cible</span>
+
+<span class="c1"># --- Exécution ---</span>
+<span class="c1"># On applique la fonction pour créer notre DataFrame de travail</span>
+<span class="n">df_sasseme</span> <span class="o">=</span> <span class="n">creer_structure_itk</span><span class="p">(</span><span class="n">df_source</span><span class="p">,</span> <span class="n">itk_sasseme</span><span class="p">)</span>
+
+<span class="c1"># --- VÉRIFICATION ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; Le nouveau DataFrame contient </span><span class="si">{</span><span class="n">df_sasseme</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> lignes et </span><span class="si">{</span><span class="n">df_sasseme</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> colonnes.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu de la structure (les 6 dernières colonnes sont vides) :&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_sasseme</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Structure du nouveau DataFrame créée avec succès.
+   -&gt; Le nouveau DataFrame contient 270 lignes et 9 colonnes.
+
+Aperçu de la structure (les 6 dernières colonnes sont vides) :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NOM_ITK_AFFICHAGE</th>
+      <th>X.</th>
+      <th>gel</th>
+      <th>arachide_precMil</th>
+      <th>arachide_precJachere</th>
+      <th>jachere_precMil</th>
+      <th>jachere_precArachide</th>
+      <th>mil_precArachide</th>
+      <th>mil_precMil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ID_ITK</td>
+      <td>[NA]</td>
+      <td>gel_tous_tous_NA</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IDS_SDCS</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>IDS_SDCS_CLASS</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ID_ESPECE</td>
+      <td>[NA]</td>
+      <td>gel</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>MATERIEL</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ajouter_lignes_semis</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vérifie si les lignes de paramètres de pluie pour le semis existent,</span>
+<span class="sd">    et les ajoute si elles sont manquantes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Noms des nouvelles lignes</span>
+    <span class="n">ligne_cumul_pluie</span> <span class="o">=</span> <span class="s1">&#39;SEMIS_CUMUL_PLUIE&#39;</span>
+    <span class="n">ligne_n_j_cumul_pluie</span> <span class="o">=</span> <span class="s1">&#39;SEMIS_N_J_CUMUL_PLUIE&#39;</span>
+
+    <span class="c1"># Vérifier si la première ligne existe déjà</span>
+    <span class="k">if</span> <span class="n">ligne_cumul_pluie</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-&gt; La ligne &#39;</span><span class="si">{</span><span class="n">ligne_cumul_pluie</span><span class="si">}</span><span class="s2">&#39; est manquante. Ajout en cours...&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># 1. Trouver où insérer les nouvelles lignes : après la dernière ligne &quot;SEMIS_&quot;</span>
+        <span class="n">lignes_semis</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;SEMIS_&#39;</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">lignes_semis</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">index_insertion</span> <span class="o">=</span> <span class="n">lignes_semis</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Sécurité si aucune ligne SEMIS n&#39;existait</span>
+            <span class="n">index_insertion</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> 
+            
+        <span class="c1"># 2. Créer les nouvelles lignes sous forme de DataFrames</span>
+        <span class="n">nouvelle_ligne1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">ligne_cumul_pluie</span><span class="p">],</span>
+            <span class="s1">&#39;X.&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;[mm]&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;gel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;NA&#39;</span><span class="p">]</span>
+        <span class="p">})</span>
+        <span class="n">nouvelle_ligne2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">ligne_n_j_cumul_pluie</span><span class="p">],</span>
+            <span class="s1">&#39;X.&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;[jour]&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;gel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;NA&#39;</span><span class="p">]</span>
+        <span class="p">})</span>
+
+        <span class="c1"># 3. Insérer les lignes au bon endroit</span>
+        <span class="n">df_partie1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">index_insertion</span><span class="p">]</span>
+        <span class="n">df_partie2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_insertion</span><span class="p">:]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_partie1</span><span class="p">,</span> <span class="n">nouvelle_ligne1</span><span class="p">,</span> <span class="n">nouvelle_ligne2</span><span class="p">,</span> <span class="n">df_partie2</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   -&gt; Lignes ajoutées avec succès.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-&gt; Les lignes de paramètres de pluie pour le semis existent déjà.&quot;</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="n">df_sasseme</span> <span class="o">=</span> <span class="n">ajouter_lignes_semis</span><span class="p">(</span><span class="n">df_sasseme</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-&gt; La ligne &#39;SEMIS_CUMUL_PLUIE&#39; est manquante. Ajout en cours...
+   -&gt; Lignes ajoutées avec succès.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">remplir_entete_itk</span><span class="p">(</span><span class="n">df_cible</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Remplit les 12 lignes d&#39;en-tête pour chaque nouvel ITK en se basant sur</span>
+<span class="sd">    le nom de la colonne de l&#39;ITK.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df_cible (pd.DataFrame): Le DataFrame avec la structure vide.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Le DataFrame avec l&#39;en-tête rempli.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. Identifier les colonnes des ITK (de la 4ème à la fin)</span>
+    <span class="n">colonnes_itk</span> <span class="o">=</span> <span class="n">df_cible</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+
+    <span class="c1"># 2. Boucler sur chaque colonne d&#39;ITK</span>
+    <span class="k">for</span> <span class="n">itk</span> <span class="ow">in</span> <span class="n">colonnes_itk</span><span class="p">:</span>
+        <span class="c1"># Extraire la culture et le précédent du nom de l&#39;ITK</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">culture</span><span class="p">,</span> <span class="n">precedent</span> <span class="o">=</span> <span class="n">itk</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_prec&#39;</span><span class="p">)</span>
+            <span class="c1"># On garde le nom en minuscules</span>
+            <span class="n">precedent</span> <span class="o">=</span> <span class="n">precedent</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> 
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ATTENTION : Le nom de l&#39;ITK &#39;</span><span class="si">{</span><span class="n">itk</span><span class="si">}</span><span class="s2">&#39; ne suit pas le format &#39;culture_precPrecedent&#39;.&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># 3. Appliquer les règles pour chaque ligne de l&#39;en-tête</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="n">itk</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ID_ITK&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="n">itk</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;IDS_SDCS&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;IDS_SDCS_CLASS&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ID_ESPECE&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="n">culture</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;MATERIEL&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NA&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ID_PREC&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="n">precedent</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ZONE_PEDO_CLASS&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NA&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;TYPE_EXPL&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CLIMAT&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;IS_CULTURE_HIVER&#39;</span><span class="p">,</span> <span class="n">itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;N&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ En-tête des 6 ITK rempli avec succès.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_cible</span>
+
+<span class="c1"># --- Exécution ---</span>
+<span class="c1"># On applique la fonction sur notre DataFrame de travail</span>
+<span class="n">df_sasseme</span> <span class="o">=</span> <span class="n">remplir_entete_itk</span><span class="p">(</span><span class="n">df_sasseme</span><span class="p">)</span>
+
+<span class="c1"># --- VÉRIFICATION ---</span>
+<span class="c1"># On affiche les 12 premières lignes pour voir le résultat</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu de l&#39;en-tête rempli :&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_sasseme</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ En-tête des 6 ITK rempli avec succès.
+
+Aperçu de l&#39;en-tête rempli :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NOM_ITK_AFFICHAGE</th>
+      <th>X.</th>
+      <th>gel</th>
+      <th>arachide_precMil</th>
+      <th>arachide_precJachere</th>
+      <th>jachere_precMil</th>
+      <th>jachere_precArachide</th>
+      <th>mil_precArachide</th>
+      <th>mil_precMil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ID_ITK</td>
+      <td>[NA]</td>
+      <td>gel_tous_tous_NA</td>
+      <td>arachide_precMil</td>
+      <td>arachide_precJachere</td>
+      <td>jachere_precMil</td>
+      <td>jachere_precArachide</td>
+      <td>mil_precArachide</td>
+      <td>mil_precMil</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IDS_SDCS</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>IDS_SDCS_CLASS</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ID_ESPECE</td>
+      <td>[NA]</td>
+      <td>gel</td>
+      <td>arachide</td>
+      <td>arachide</td>
+      <td>jachere</td>
+      <td>jachere</td>
+      <td>mil</td>
+      <td>mil</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>MATERIEL</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ID_PREC</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td>mil</td>
+      <td>jachere</td>
+      <td>mil</td>
+      <td>arachide</td>
+      <td>arachide</td>
+      <td>mil</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ZONE_PEDO</td>
+      <td>[NA]</td>
+      <td>*</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ZONE_PEDO_CLASS</td>
+      <td>[NA]</td>
+      <td>tous</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>TYPE_EXPL</td>
+      <td>[NA]</td>
+      <td>all</td>
+      <td>all</td>
+      <td>all</td>
+      <td>all</td>
+      <td>all</td>
+      <td>all</td>
+      <td>all</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>CLIMAT</td>
+      <td>[NA]</td>
+      <td>NaN</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>IS_CULTURE_HIVER</td>
+      <td>[NA]</td>
+      <td>O</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>IS_PREPA</td>
+      <td>[NA]</td>
+      <td>N</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">initialiser_operations_a_na</span><span class="p">(</span><span class="n">df_cible</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initialise toutes les opérations techniques (lignes après l&#39;en-tête)</span>
+<span class="sd">    à un état &quot;désactivé&quot; par défaut (&#39;NA&#39; ou &#39;N&#39;).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df_cible (pd.DataFrame): Le DataFrame avec l&#39;en-tête déjà rempli.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Le DataFrame avec toutes les opérations initialisées.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. Identifier les colonnes des ITK (de la 4ème à la fin)</span>
+    <span class="n">colonnes_itk</span> <span class="o">=</span> <span class="n">df_cible</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+    
+    <span class="c1"># 2. Remplir toutes les cellules d&#39;opérations (après la 12ème ligne) avec NA</span>
+    <span class="c1">#    L&#39;index 12 correspond à la 13ème ligne.</span>
+    <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">12</span><span class="p">:,</span> <span class="n">colonnes_itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NA&#39;</span>
+    
+    <span class="c1"># 3. Mettre à &#39;N&#39; (Non) toutes les lignes qui activent une opération (celles qui commencent par &#39;IS_&#39;)</span>
+    <span class="c1">#    On s&#39;assure de ne pas toucher à la ligne &#39;IS_CULTURE_HIVER&#39; qui est dans l&#39;en-tête.</span>
+    <span class="n">lignes_is</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;IS_&#39;</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_cible</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;</span> <span class="mi">11</span><span class="p">)</span>
+    <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">lignes_is</span><span class="p">,</span> <span class="n">colonnes_itk</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;N&#39;</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Toutes les opérations techniques ont été initialisées à &#39;NA&#39; ou &#39;N&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_cible</span>
+
+<span class="c1"># --- Exécution ---</span>
+<span class="c1"># On applique la fonction sur notre DataFrame de travail</span>
+<span class="n">df_sasseme</span> <span class="o">=</span> <span class="n">initialiser_operations_a_na</span><span class="p">(</span><span class="n">df_sasseme</span><span class="p">)</span>
+
+<span class="c1"># --- VÉRIFICATION ---</span>
+<span class="c1"># On affiche un extrait du DataFrame après la ligne 12 pour voir le résultat</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu de la &#39;page blanche&#39; pour les opérations :&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_sasseme</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">25</span><span class="p">])</span> <span class="c1"># Affiche les lignes de 13 à 26</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Toutes les opérations techniques ont été initialisées à &#39;NA&#39; ou &#39;N&#39;.
+
+Aperçu de la &#39;page blanche&#39; pour les opérations :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NOM_ITK_AFFICHAGE</th>
+      <th>X.</th>
+      <th>gel</th>
+      <th>arachide_precMil</th>
+      <th>arachide_precJachere</th>
+      <th>jachere_precMil</th>
+      <th>jachere_precArachide</th>
+      <th>mil_precArachide</th>
+      <th>mil_precMil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>PREPA_PASSAGES</td>
+      <td>[NA]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>PREPA_OUTIL</td>
+      <td>[nom]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>PREPA_AGRIW</td>
+      <td>[bool]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>PREPA_NB_SOUS_PERIODES</td>
+      <td>[NA]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>PREPA_TEMPS</td>
+      <td>[Ha/h]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>PREPA_DEBUT</td>
+      <td>[jour]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>PREPA_FIN</td>
+      <td>[jour]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>PREPA_JOURS_P-ETP_MIN</td>
+      <td>[jour]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>PREPA_P-ETP_MIN</td>
+      <td>[mm]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>PREPA_JOURS_PLUIE</td>
+      <td>[jour]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>PREPA_HAUTEURS_PLUIE_MAX</td>
+      <td>[mm]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>PREPA_HUMIDITE_SOL_MAX</td>
+      <td>[%]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>PREPA_EFFET_RUs</td>
+      <td>[NA]</td>
+      <td>NaN</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>PREPA_TEMPERATURE_MIN</td>
+      <td>[C]</td>
+      <td>N</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Dictionnaire de configuration pour Sasseme ---</span>
+
+<span class="n">configuration_sasseme</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;PREPA&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;IS_PREPA&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;O&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;PREPA_TEMPS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mf">0.0417</span><span class="p">},</span>
+        <span class="s1">&#39;PREPA_DEBUT&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">121</span><span class="p">},</span>
+        <span class="s1">&#39;PREPA_FIN&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">151</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;SEMIS&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;IS_SEMIS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;O&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;SEMIS_DEBUT&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">152</span><span class="p">},</span>
+        <span class="s1">&#39;SEMIS_FIN&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">181</span><span class="p">},</span>
+        <span class="c1"># Paramètres spécifiques à l&#39;arachide</span>
+        <span class="s1">&#39;SEMIS_CUMUL_PLUIE&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="s1">&#39;condition&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;ligne_condition&#39;</span><span class="p">:</span> <span class="s1">&#39;ID_ESPECE&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur_attendue&#39;</span><span class="p">:</span> <span class="s1">&#39;arachide&#39;</span><span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;SEMIS_N_J_CUMUL_PLUIE&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;condition&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;ligne_condition&#39;</span><span class="p">:</span> <span class="s1">&#39;ID_ESPECE&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur_attendue&#39;</span><span class="p">:</span> <span class="s1">&#39;arachide&#39;</span><span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;RECOLTE&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;IS_RECOLTE&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;O&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;RECOLTE_TEMPS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mf">0.0179</span><span class="p">},</span>
+        <span class="s1">&#39;RECOLTE_DEBUT&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">258</span><span class="p">},</span>
+        <span class="s1">&#39;RECOLTE_FIN&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="mi">288</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">appliquer_parametres_specifiques</span><span class="p">(</span><span class="n">df_cible</span><span class="p">,</span> <span class="n">configuration</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Active et paramètre des opérations spécifiques dans le DataFrame des règles</span>
+<span class="sd">    en se basant sur un dictionnaire de configuration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">colonnes_itk</span> <span class="o">=</span> <span class="n">df_cible</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+
+    <span class="k">for</span> <span class="n">operation</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">configuration</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">nom_param</span><span class="p">,</span> <span class="n">details</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">valeur</span> <span class="o">=</span> <span class="n">details</span><span class="p">[</span><span class="s1">&#39;valeur&#39;</span><span class="p">]</span>
+            <span class="n">condition</span> <span class="o">=</span> <span class="n">details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;condition&#39;</span><span class="p">)</span>
+
+            <span class="n">ligne_index</span> <span class="o">=</span> <span class="n">df_cible</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">nom_param</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">ligne_index</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-&gt; AVERTISSEMENT : Le paramètre &#39;</span><span class="si">{</span><span class="n">nom_param</span><span class="si">}</span><span class="s2">&#39; n&#39;a pas été trouvé dans la table.&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">condition</span><span class="p">:</span>
+                <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ligne_index</span><span class="p">,</span> <span class="n">colonnes_itk</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeur</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Utilise la clé &#39;ligne_condition&#39;</span>
+                <span class="n">nom_ligne_condition</span> <span class="o">=</span> <span class="n">condition</span><span class="p">[</span><span class="s1">&#39;ligne_condition&#39;</span><span class="p">]</span>
+                <span class="n">valeur_attendue</span> <span class="o">=</span> <span class="n">condition</span><span class="p">[</span><span class="s1">&#39;valeur_attendue&#39;</span><span class="p">]</span>
+                
+                <span class="n">ligne_condition_index</span> <span class="o">=</span> <span class="n">df_cible</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">df_cible</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">nom_ligne_condition</span><span class="p">]</span>
+                
+                <span class="n">colonnes_a_modifier</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">colonnes_itk</span> 
+                    <span class="k">if</span> <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ligne_condition_index</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">valeur_attendue</span>
+                <span class="p">]</span>
+                
+                <span class="n">df_cible</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ligne_index</span><span class="p">,</span> <span class="n">colonnes_a_modifier</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeur</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Paramètres spécifiques appliqués avec succès.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_cible</span>
+
+<span class="c1"># --- Exécution ---</span>
+<span class="n">df_sasseme</span> <span class="o">=</span> <span class="n">appliquer_parametres_specifiques</span><span class="p">(</span><span class="n">df_sasseme</span><span class="p">,</span> <span class="n">configuration_sasseme</span><span class="p">)</span>
+
+<span class="c1"># --- VÉRIFICATION ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aperçu de quelques paramètres modifiés :&quot;</span><span class="p">)</span>
+<span class="n">parametres_a_verifier</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;IS_PREPA&#39;</span><span class="p">,</span> <span class="s1">&#39;PREPA_TEMPS&#39;</span><span class="p">,</span> <span class="s1">&#39;PREPA_DEBUT&#39;</span><span class="p">,</span> <span class="s1">&#39;PREPA_FIN&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IS_SEMIS&#39;</span><span class="p">,</span> <span class="s1">&#39;SEMIS_DEBUT&#39;</span><span class="p">,</span> <span class="s1">&#39;SEMIS_FIN&#39;</span><span class="p">,</span> <span class="s1">&#39;SEMIS_CUMUL_PLUIE&#39;</span><span class="p">,</span> <span class="s1">&#39;SEMIS_N_J_CUMUL_PLUIE&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IS_RECOLTE&#39;</span><span class="p">,</span> <span class="s1">&#39;RECOLTE_TEMPS&#39;</span><span class="p">,</span> <span class="s1">&#39;RECOLTE_DEBUT&#39;</span><span class="p">,</span> <span class="s1">&#39;RECOLTE_FIN&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IS_BINAGE&#39;</span>
+<span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_sasseme</span><span class="p">[</span><span class="n">df_sasseme</span><span class="p">[</span><span class="s1">&#39;NOM_ITK_AFFICHAGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">parametres_a_verifier</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Paramètres spécifiques appliqués avec succès.
+
+Aperçu de quelques paramètres modifiés :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NOM_ITK_AFFICHAGE</th>
+      <th>X.</th>
+      <th>gel</th>
+      <th>arachide_precMil</th>
+      <th>arachide_precJachere</th>
+      <th>jachere_precMil</th>
+      <th>jachere_precArachide</th>
+      <th>mil_precArachide</th>
+      <th>mil_precMil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>IS_PREPA</td>
+      <td>[NA]</td>
+      <td>N</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>PREPA_TEMPS</td>
+      <td>[Ha/h]</td>
+      <td>NaN</td>
+      <td>0.0417</td>
+      <td>0.0417</td>
+      <td>0.0417</td>
+      <td>0.0417</td>
+      <td>0.0417</td>
+      <td>0.0417</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>PREPA_DEBUT</td>
+      <td>[jour]</td>
+      <td>NaN</td>
+      <td>121</td>
+      <td>121</td>
+      <td>121</td>
+      <td>121</td>
+      <td>121</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>PREPA_FIN</td>
+      <td>[jour]</td>
+      <td>NaN</td>
+      <td>151</td>
+      <td>151</td>
+      <td>151</td>
+      <td>151</td>
+      <td>151</td>
+      <td>151</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>IS_SEMIS</td>
+      <td>[NA]</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>SEMIS_DEBUT</td>
+      <td>[jour]</td>
+      <td>10</td>
+      <td>152</td>
+      <td>152</td>
+      <td>152</td>
+      <td>152</td>
+      <td>152</td>
+      <td>152</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>SEMIS_FIN</td>
+      <td>[jour]</td>
+      <td>20</td>
+      <td>181</td>
+      <td>181</td>
+      <td>181</td>
+      <td>181</td>
+      <td>181</td>
+      <td>181</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>SEMIS_CUMUL_PLUIE</td>
+      <td>[mm]</td>
+      <td>NA</td>
+      <td>20</td>
+      <td>20</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>SEMIS_N_J_CUMUL_PLUIE</td>
+      <td>[jour]</td>
+      <td>NA</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>IS_BINAGE</td>
+      <td>[NA]</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>IS_RECOLTE</td>
+      <td>[NA]</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>RECOLTE_TEMPS</td>
+      <td>[Ha/h]</td>
+      <td>1000</td>
+      <td>0.0179</td>
+      <td>0.0179</td>
+      <td>0.0179</td>
+      <td>0.0179</td>
+      <td>0.0179</td>
+      <td>0.0179</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>RECOLTE_DEBUT</td>
+      <td>[jour]</td>
+      <td>1</td>
+      <td>258</td>
+      <td>258</td>
+      <td>258</td>
+      <td>258</td>
+      <td>258</td>
+      <td>258</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>RECOLTE_FIN</td>
+      <td>[jour]</td>
+      <td>366</td>
+      <td>288</td>
+      <td>288</td>
+      <td>288</td>
+      <td>288</td>
+      <td>288</td>
+      <td>288</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sauvegarder le fichier principal des règles de décision</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">output_regles_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df_sasseme</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_regles_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Fichier &#39;reglesDeDecision.csv&#39; sauvegardé avec succès.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; Emplacement : </span><span class="si">{</span><span class="n">output_regles_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚨 ERREUR lors de la sauvegarde de reglesDeDecision.csv : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Fichier &#39;reglesDeDecision.csv&#39; sauvegardé avec succès.
+   -&gt; Emplacement : C:\Users\Cheikhou\Desktop\Ferlo_Sine\maelia-data-diohine-v1\includes_sassemeV1\modeleAgricole\culture\reglesDeDecision.csv
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../docs/10-traitement-regles-decision.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Création des Fichiers de Règles de Décision</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../docs/11-traitement-regles-ferti.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Création des Règles de Fertilisation (<code class="docutils literal notranslate"><span class="pre">reglesDeDecisions_fertilisation.csv</span></code>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-du-projet">1. Description du projet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">2. Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie">3. Méthodologie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree-et-en-sortie">4. Fichiers en Entrée et en Sortie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-en-entree">4.1. Fichier en Entrée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-sortie">4.2. Fichiers en Sortie</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cheikhou Akhmed Kane
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

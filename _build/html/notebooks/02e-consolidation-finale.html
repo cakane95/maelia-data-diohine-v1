@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Création du Fichier typeDeSolParZH.shp : Consolidation finale &#8212; Instanciation MAELIA - Territoire de Sasseme (Diohine)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02e-consolidation-finale';</script>
+    <link rel="icon" href="../_static/LogoFairCarbon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Objectif" href="../docs/07-traitement-joursParMois.html" />
+    <link rel="prev" title="Création du Fichier typeDeSolParZH.shp : Jointure Parcellaire et Donnees Terrain" href="02d-creation-parcellaire-enrichi.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../docs/intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/LogoFairCarbon.png" class="logo__image only-light" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>
+    <script>document.write(`<img src="../_static/LogoFairCarbon.png" class="logo__image only-dark" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../docs/intro.html">
+                    Introduction : Instanciation du Territoire de Diohine
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Commun</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/01-traitement-donnees-climat.html">Données Climatiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/05-traitement-polygone-meteo.html">Méthodologie - Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-creation-polygone-meteo.html">Notebook - Création du Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/02-traitement-donnees-sols.html">Méthodologie - Sols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02a-creation-centroides.html">Notebook - Préparation des Points d'Échantillonnage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02b-extraction-agregation-donnees.html">Notebook - Extraction &amp; Agrégation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02c-ajout-donnees-expertes.html">Notebook - Ajout des Données Expertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02d-creation-parcellaire-enrichi.html">Notebook - Création du Parcellaire Enrichi</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook - Consolidation du Shapefile Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/07-traitement-joursParMois.html">1. Objectif</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="07-copie-joursParMois.html">Notebook - Copie de joursParMois.csv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Agricole</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/03-traitement-donnees-expl.html">Méthodologie - Exploitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-creation-exploitations.html">Notebook - Création de exploitations.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/04-traitement-donnees-ilots.html">Méthodologie - Îlots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-creation-ilots.html">Notebook - Création de ilots.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/12-traitement-donnees-parcelles.html">Méthodologie - Parcelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-creation-parcelles.html">Notebook - Création de parcelles.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/08-traitement-donnees-engrais.html">Méthodologie - Engrais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-copie-engrais.html">Notebook - Copie de Engrais.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/10-traitement-regles-decision.html">Méthodologie - Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-creation-regles-decision.html">Notebook - Création des Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/11-traitement-regles-ferti.html">Méthodologie - Règles de Fertilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-creation-regles-ferti.html">Notebook - Création des Règles de Fertilisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Hydrographique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/06-traitement-zone-hydro.html">Méthodologie - Zone Hydrographique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-creation-zh.html">Notebook - Création de ZH.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/09-traitement-contour-zh.html">Méthodologie - Contour ZH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-creation-contour-zh.html">Notebook - Création de contourZH.shp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilitaires</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../docs/13-utilitaires.html">Scripts Utilitaires</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/02e-consolidation-finale.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Création du Fichier typeDeSolParZH.shp : Consolidation finale</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-du-projet">1. Description du projet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">2. Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree-et-en-sortie">3. Fichiers en Entrée et en Sortie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree">3.1. Fichiers en Entrée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-en-sortie">3.2. Fichier en Sortie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jointure">4. Jointure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation">5. Visualisation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Auteur(s)</strong> : Cheikhou Akhmed KANE</p>
+<p><strong>Description</strong> :Consolidation du fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code></p>
+<section class="tex2jax_ignore mathjax_ignore" id="creation-du-fichier-typedesolparzh-shp-consolidation-finale">
+<h1>Création du Fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> : Consolidation finale<a class="headerlink" href="#creation-du-fichier-typedesolparzh-shp-consolidation-finale" title="Link to this heading">#</a></h1>
+<section id="description-du-projet">
+<h2>1. Description du projet<a class="headerlink" href="#description-du-projet" title="Link to this heading">#</a></h2>
+<p>Ce notebook est l’étape finale du traitement des données de sol. Son objectif est de consolider les données attributaires agrégées (la table de synthèse) avec la géométrie des parcelles pour créer la couche de sol finale, <strong><code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code></strong>, requise par le modèle MAELIA.</p>
+</section>
+<hr class="docutils" />
+<section id="objectifs">
+<h2>2. Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Charger le parcellaire (<code class="docutils literal notranslate"><span class="pre">.shp</span></code>) et la table de synthèse finale des propriétés de sol (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>).</p></li>
+<li><p>Joindre les propriétés de sol agrégées à chaque parcelle correspondante via l’identifiant <code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code>.</p></li>
+<li><p>Visualiser le parcellaire coloré par <code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code> pour une validation qualitative.</p></li>
+<li><p><strong>Fusionner (dissolve)</strong> les parcelles adjacentes de même <code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code> pour créer des polygones de sol homogènes.</p></li>
+<li><p>Sauvegarder le GeoDataFrame final au format Shapefile.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="fichiers-en-entree-et-en-sortie">
+<h2>3. Fichiers en Entrée et en Sortie<a class="headerlink" href="#fichiers-en-entree-et-en-sortie" title="Link to this heading">#</a></h2>
+<section id="fichiers-en-entree">
+<h3>3.1. Fichiers en Entrée<a class="headerlink" href="#fichiers-en-entree" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Parcellaire Géométrique :</strong> <code class="docutils literal notranslate"><span class="pre">data/sols/shapefiles/processed/parcellaire_enrichi.shp</span></code></p></li>
+<li><p><strong>Données de Synthèse :</strong> <code class="docutils literal notranslate"><span class="pre">data/sols/csv/processed/donnees_typesDeSol_enrichies.csv</span></code></p></li>
+</ul>
+</section>
+<section id="fichier-en-sortie">
+<h3>3.2. Fichier en Sortie<a class="headerlink" href="#fichier-en-sortie" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Shapefile Final :</strong> <code class="docutils literal notranslate"><span class="pre">includes_sassemeV1/modeleCommun/typesDeSol/typeDeSolParZH.shp</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- CHEMINS --- #</span>
+
+<span class="c1"># Définir le chemin racine du projet</span>
+<span class="n">base_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+
+<span class="c1"># Fichiers en entrée</span>
+<span class="n">input_parcellaire_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;sols&quot;</span> <span class="o">/</span> <span class="s2">&quot;shapefiles&quot;</span> <span class="o">/</span> <span class="s2">&quot;processed&quot;</span> <span class="o">/</span> <span class="s2">&quot;parcellaire_enrichi.shp&quot;</span>
+<span class="n">input_synthese_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;sols&quot;</span> <span class="o">/</span> <span class="s2">&quot;csv&quot;</span> <span class="o">/</span> <span class="s2">&quot;processed&quot;</span> <span class="o">/</span> <span class="s2">&quot;donnees_typesDeSol_enrichies.csv&quot;</span>
+
+<span class="c1"># Fichier en sortie</span>
+<span class="n">output_shapefile_path</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">/</span> <span class="s2">&quot;includes_sassemeV1&quot;</span> <span class="o">/</span> <span class="s2">&quot;modeleCommun&quot;</span> <span class="o">/</span> <span class="s2">&quot;typesDeSol&quot;</span> <span class="o">/</span> <span class="s2">&quot;typeDeSolParZH.shp&quot;</span>
+
+<span class="c1"># --- VÉRIFICATION ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Le shapefile final sera sauvegardé ici :</span><span class="se">\n</span><span class="si">{</span><span class="n">output_shapefile_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le shapefile final sera sauvegardé ici :
+C:\Users\Cheikhou\Desktop\Ferlo_Sine\maelia-data-diohine-v1\includes_sassemeV1\modeleCommun\typesDeSol\typeDeSolParZH.shp
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- CHARGEMENT DES DONNÉES SOURCES ---</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># 1. Charger le shapefile du parcellaire</span>
+    <span class="n">gdf_parcellaire</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">input_parcellaire_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Shapefile du parcellaire enrichi chargé.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; </span><span class="si">{</span><span class="n">gdf_parcellaire</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> polygones et </span><span class="si">{</span><span class="n">gdf_parcellaire</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> colonnes.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 2. Charger la table de synthèse</span>
+    <span class="n">df_synthese</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_synthese_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Table de synthèse des sols chargée.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; </span><span class="si">{</span><span class="n">df_synthese</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> lignes et </span><span class="si">{</span><span class="n">df_synthese</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> colonnes.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># --- VÉRIFICATION DE LA CLÉ DE JOINTURE (AJOUTÉ) ---</span>
+    <span class="n">colonne_cle</span> <span class="o">=</span> <span class="s1">&#39;ZONE_PEDO&#39;</span>
+    <span class="k">if</span> <span class="n">colonne_cle</span> <span class="ow">in</span> <span class="n">gdf_parcellaire</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="n">colonne_cle</span> <span class="ow">in</span> <span class="n">df_synthese</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Vérification réussie : La colonne clé &#39;</span><span class="si">{</span><span class="n">colonne_cle</span><span class="si">}</span><span class="s2">&#39; est présente dans les deux fichiers.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🚨 ATTENTION : La colonne clé &#39;</span><span class="si">{</span><span class="n">colonne_cle</span><span class="si">}</span><span class="s2">&#39; est manquante dans l&#39;un des fichiers.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">colonne_cle</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">gdf_parcellaire</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; Colonnes du parcellaire : </span><span class="si">{</span><span class="n">gdf_parcellaire</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">colonne_cle</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df_synthese</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; Colonnes de la table de synthèse : </span><span class="si">{</span><span class="n">df_synthese</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1"># ----------------------------------------------------</span>
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚨 ERREUR : Un fichier est introuvable. Vérifiez le chemin : </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚨 Une erreur est survenue : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Shapefile du parcellaire enrichi chargé.
+   -&gt; 749 polygones et 31 colonnes.
+
+✅ Table de synthèse des sols chargée.
+   -&gt; 8 lignes et 33 colonnes.
+
+✅ Vérification réussie : La colonne clé &#39;ZONE_PEDO&#39; est présente dans les deux fichiers.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="jointure">
+<h2>4. Jointure<a class="headerlink" href="#jointure" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- PRÉPARATION À LA JOINTURE ---</span>
+
+<span class="c1"># 1. Définir la liste des 8 ZONE_PEDO valides (comme dans le notebook 02b)</span>
+<span class="n">zones_pedo_valides</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;dior_cb_avec_arbr&#39;</span><span class="p">,</span> <span class="s1">&#39;dior_cb_sans_arbr&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dior_cc_avec_arbr&#39;</span><span class="p">,</span> <span class="s1">&#39;dior_cc_sans_arbr&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dekk_cb_avec_arbr&#39;</span><span class="p">,</span> <span class="s1">&#39;dekk_cb_sans_arbr&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dekkMbel_cb_avec_arbr&#39;</span><span class="p">,</span> <span class="s1">&#39;dekkMbel_cb_sans_arbr&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># 2. Filtrer le parcellaire pour ne garder que les parcelles valides</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lignes dans le parcellaire avant filtrage : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_parcellaire</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">gdf_parcellaire_filtre</span> <span class="o">=</span> <span class="n">gdf_parcellaire</span><span class="p">[</span><span class="n">gdf_parcellaire</span><span class="p">[</span><span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">zones_pedo_valides</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lignes après filtrage : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_parcellaire_filtre</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># 3. On crée le GeoDataFrame simplifié à partir de la version filtrée</span>
+<span class="n">gdf_geom</span> <span class="o">=</span> <span class="n">gdf_parcellaire_filtre</span><span class="p">[[</span><span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># --- JOINTURE ---</span>
+<span class="n">gdf_final</span> <span class="o">=</span> <span class="n">gdf_geom</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">df_synthese</span><span class="p">,</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># --- VÉRIFICATION APRÈS JOINTURE ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Après la jointure ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GeoDataFrame final : </span><span class="si">{</span><span class="n">gdf_final</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> lignes, </span><span class="si">{</span><span class="n">gdf_final</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> colonnes.&quot;</span><span class="p">)</span>
+
+<span class="n">valeurs_manquantes</span> <span class="o">=</span> <span class="n">gdf_final</span><span class="p">[</span><span class="s1">&#39;ID_SOL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">valeurs_manquantes</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Vérification réussie : Toutes les parcelles ont été enrichies.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🚨 ATTENTION : </span><span class="si">{</span><span class="n">valeurs_manquantes</span><span class="si">}</span><span class="s2"> parcelle(s) n&#39;ont pas trouvé de correspondance.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lignes dans le parcellaire avant filtrage : 749
+Lignes après filtrage : 739
+
+--- Après la jointure ---
+GeoDataFrame final : 739 lignes, 34 colonnes.
+
+✅ Vérification réussie : Toutes les parcelles ont été enrichies.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">gdf_final</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ZONE_PEDO</th>
+      <th>geometry</th>
+      <th>ID_SOL</th>
+      <th>ID_ZH</th>
+      <th>STU_DOM</th>
+      <th>PIRM</th>
+      <th>CSTRU</th>
+      <th>PRO</th>
+      <th>P1</th>
+      <th>P2</th>
+      <th>...</th>
+      <th>HPFP1</th>
+      <th>HPFP2</th>
+      <th>RUPRH1</th>
+      <th>RUPRH2</th>
+      <th>KSAT1</th>
+      <th>KSAT2</th>
+      <th>EG1</th>
+      <th>EG2</th>
+      <th>CAL1</th>
+      <th>CAL2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>dior_cc_avec_arbr</td>
+      <td>MULTIPOLYGON (((337434.305 1603598.415, 337435...</td>
+      <td>SSM1-sableux-dior_cc_avec_arbr</td>
+      <td>SSM1</td>
+      <td>sableux</td>
+      <td>840.48</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.528945</td>
+      <td>8.903010</td>
+      <td>30.249492</td>
+      <td>31.341921</td>
+      <td>674.64</td>
+      <td>505.980</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dior_cc_sans_arbr</td>
+      <td>POLYGON ((337438.043 1603638.866, 337438.614 1...</td>
+      <td>SSM1-sableux-dior_cc_sans_arbr</td>
+      <td>SSM1</td>
+      <td>sableux</td>
+      <td>696.00</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.674406</td>
+      <td>9.036141</td>
+      <td>30.708344</td>
+      <td>31.814872</td>
+      <td>480.24</td>
+      <td>360.180</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dekk_cb_avec_arbr</td>
+      <td>MULTIPOLYGON (((336159.144 1603477.128, 336160...</td>
+      <td>SSM1-argileux-dekk_cb_avec_arbr</td>
+      <td>SSM1</td>
+      <td>argileux</td>
+      <td>420.24</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.657769</td>
+      <td>8.797480</td>
+      <td>30.489314</td>
+      <td>30.789434</td>
+      <td>322.74</td>
+      <td>242.055</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>dekk_cb_sans_arbr</td>
+      <td>POLYGON ((336165.254 1603521.577, 336167.671 1...</td>
+      <td>SSM1-argileux-dekk_cb_sans_arbr</td>
+      <td>SSM1</td>
+      <td>argileux</td>
+      <td>348.00</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.763053</td>
+      <td>8.867642</td>
+      <td>31.033094</td>
+      <td>31.073014</td>
+      <td>296.28</td>
+      <td>222.210</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>dior_cb_avec_arbr</td>
+      <td>MULTIPOLYGON (((336335.234 1602955.393, 336334...</td>
+      <td>SSM1-sableux-dior_cb_avec_arbr</td>
+      <td>SSM1</td>
+      <td>sableux</td>
+      <td>840.48</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.677742</td>
+      <td>8.947725</td>
+      <td>30.514047</td>
+      <td>31.181659</td>
+      <td>674.64</td>
+      <td>505.980</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 34 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="visualisation">
+<h2>5. Visualisation<a class="headerlink" href="#visualisation" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- VISUALISATION ---</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+
+<span class="n">gdf_final</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;ID_SOL&#39;</span><span class="p">,</span> <span class="c1"># Colonne utilisée pour la coloration</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>     <span class="c1"># Afficher la légende</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;tab20&#39;</span><span class="p">,</span>      <span class="c1"># Palette de couleurs adaptées aux catégories</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="c1"># Couleur des bordures des parcelles</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span>
+<span class="p">)</span>
+
+<span class="c1"># Améliorer l&#39;affichage</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Répartition Spatiale des Unités de Sol (ID_SOL)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Longitude&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0dc363c6eabc573e16d278148fef3b356bc0c989899a818c824765e8f4d63b70.png" src="../_images/0dc363c6eabc573e16d278148fef3b356bc0c989899a818c824765e8f4d63b70.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- FUSION (DISSOLVE) ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre de polygones avant la fusion : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_final</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Fusionner les polygones en se basant sur la colonne &#39;ZONE_PEDO&#39;</span>
+<span class="c1"># aggfunc=&#39;first&#39; signifie que pour les autres colonnes, on garde la première valeur rencontrée</span>
+<span class="c1"># (ce qui est correct ici car elles sont toutes identiques pour une même ZONE_PEDO)</span>
+<span class="n">gdf_fusion</span> <span class="o">=</span> <span class="n">gdf_final</span><span class="o">.</span><span class="n">dissolve</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># --- VÉRIFICATION ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre de polygones après la fusion : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_fusion</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Fusion des polygones terminée.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aperçu du GeoDataFrame fusionné :&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">gdf_fusion</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre de polygones avant la fusion : 739
+Nombre de polygones après la fusion : 8
+
+✅ Fusion des polygones terminée.
+Aperçu du GeoDataFrame fusionné :
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ZONE_PEDO</th>
+      <th>geometry</th>
+      <th>ID_SOL</th>
+      <th>ID_ZH</th>
+      <th>STU_DOM</th>
+      <th>PIRM</th>
+      <th>CSTRU</th>
+      <th>PRO</th>
+      <th>P1</th>
+      <th>P2</th>
+      <th>...</th>
+      <th>HPFP1</th>
+      <th>HPFP2</th>
+      <th>RUPRH1</th>
+      <th>RUPRH2</th>
+      <th>KSAT1</th>
+      <th>KSAT2</th>
+      <th>EG1</th>
+      <th>EG2</th>
+      <th>CAL1</th>
+      <th>CAL2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>dekkMbel_cb_avec_arbr</td>
+      <td>MULTIPOLYGON (((334579.446 1600113.015, 334578...</td>
+      <td>SSM1-argileux-dekkMbel_cb_avec_arbr</td>
+      <td>SSM1</td>
+      <td>argileux</td>
+      <td>420.24</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>9.113581</td>
+      <td>9.235677</td>
+      <td>32.438357</td>
+      <td>32.540670</td>
+      <td>322.74</td>
+      <td>242.055</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dekkMbel_cb_sans_arbr</td>
+      <td>MULTIPOLYGON (((334520.634 1600115.406, 334515...</td>
+      <td>SSM1-argileux-dekkMbel_cb_sans_arbr</td>
+      <td>SSM1</td>
+      <td>argileux</td>
+      <td>348.00</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.976415</td>
+      <td>9.353365</td>
+      <td>31.926052</td>
+      <td>32.738577</td>
+      <td>296.28</td>
+      <td>222.210</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dekk_cb_avec_arbr</td>
+      <td>MULTIPOLYGON (((334502.005 1600260.324, 334500...</td>
+      <td>SSM1-argileux-dekk_cb_avec_arbr</td>
+      <td>SSM1</td>
+      <td>argileux</td>
+      <td>420.24</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.657769</td>
+      <td>8.797480</td>
+      <td>30.489314</td>
+      <td>30.789434</td>
+      <td>322.74</td>
+      <td>242.055</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>dekk_cb_sans_arbr</td>
+      <td>MULTIPOLYGON (((334459.514 1600286.128, 334460...</td>
+      <td>SSM1-argileux-dekk_cb_sans_arbr</td>
+      <td>SSM1</td>
+      <td>argileux</td>
+      <td>348.00</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.763053</td>
+      <td>8.867642</td>
+      <td>31.033094</td>
+      <td>31.073014</td>
+      <td>296.28</td>
+      <td>222.210</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>dior_cb_avec_arbr</td>
+      <td>MULTIPOLYGON (((333645.574 1599948.217, 333644...</td>
+      <td>SSM1-sableux-dior_cb_avec_arbr</td>
+      <td>SSM1</td>
+      <td>sableux</td>
+      <td>840.48</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>30</td>
+      <td>60</td>
+      <td>...</td>
+      <td>8.677742</td>
+      <td>8.947725</td>
+      <td>30.514047</td>
+      <td>31.181659</td>
+      <td>674.64</td>
+      <td>505.980</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 34 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- VISUALISATION APRÈS FUSION ---</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+
+<span class="n">gdf_fusion</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;ZONE_PEDO&#39;</span><span class="p">,</span> <span class="c1"># On colore selon la ZONE_PEDO qui a servi à la fusion</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;tab20&#39;</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="c1"># Bordure blanche pour mieux voir les polygones fusionnés</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="p">)</span>
+
+<span class="c1"># Améliorer l&#39;affichage</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Carte des Unités de Sol Homogènes (après fusion)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Longitude&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/31fdcb861492cf6a988fa4fca23fa0f77d0facb15abe1c0f6ba1dbaeb50dad07.png" src="../_images/31fdcb861492cf6a988fa4fca23fa0f77d0facb15abe1c0f6ba1dbaeb50dad07.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># S&#39;assurer que le dossier de destination existe</span>
+<span class="n">output_shapefile_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Sauvegarder le GeoDataFrame fusionné au format Shapefile</span>
+<span class="n">gdf_fusion</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span>
+    <span class="n">output_shapefile_path</span><span class="p">,</span> 
+    <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Shapefile final &#39;typeDeSolParZH.shp&#39; sauvegardé avec succès.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   -&gt; Emplacement : </span><span class="si">{</span><span class="n">output_shapefile_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Shapefile final &#39;typeDeSolParZH.shp&#39; sauvegardé avec succès.
+   -&gt; Emplacement : C:\Users\Cheikhou\Desktop\Ferlo_Sine\maelia-data-diohine-v1\includes_sassemeV1\modeleCommun\typesDeSol\typeDeSolParZH.shp
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02d-creation-parcellaire-enrichi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Création du Fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> : Jointure Parcellaire et Donnees Terrain</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../docs/07-traitement-joursParMois.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">1. Objectif</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-du-projet">1. Description du projet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">2. Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree-et-en-sortie">3. Fichiers en Entrée et en Sortie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers-en-entree">3.1. Fichiers en Entrée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-en-sortie">3.2. Fichier en Sortie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jointure">4. Jointure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation">5. Visualisation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cheikhou Akhmed Kane
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

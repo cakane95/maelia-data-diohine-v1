@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Méthodologie de Caractérisation des Sols pour l’Instanciation MAELIA &#8212; Instanciation MAELIA - Territoire de Sasseme (Diohine)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/02-traitement-donnees-sols';</script>
+    <link rel="icon" href="../_static/LogoFairCarbon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Création du Fichier typeDeSolParZH.shp : Points de collecte" href="../notebooks/02a-creation-centroides.html" />
+    <link rel="prev" title="Création du Fichier du Polygone Météo (polygoneMeteoFrance.shp)" href="../notebooks/05-creation-polygone-meteo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/LogoFairCarbon.png" class="logo__image only-light" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>
+    <script>document.write(`<img src="../_static/LogoFairCarbon.png" class="logo__image only-dark" alt="Instanciation MAELIA - Territoire de Sasseme (Diohine) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction : Instanciation du Territoire de Diohine
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Commun</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-traitement-donnees-climat.html">Données Climatiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-traitement-polygone-meteo.html">Méthodologie - Polygone Météo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/05-creation-polygone-meteo.html">Notebook - Création du Polygone Météo</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Méthodologie - Sols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02a-creation-centroides.html">Notebook - Préparation des Points d'Échantillonnage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02b-extraction-agregation-donnees.html">Notebook - Extraction &amp; Agrégation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02c-ajout-donnees-expertes.html">Notebook - Ajout des Données Expertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02d-creation-parcellaire-enrichi.html">Notebook - Création du Parcellaire Enrichi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/02e-consolidation-finale.html">Notebook - Consolidation du Shapefile Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-traitement-joursParMois.html">1. Objectif</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/07-copie-joursParMois.html">Notebook - Copie de joursParMois.csv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Agricole</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="03-traitement-donnees-expl.html">Méthodologie - Exploitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/03-creation-exploitations.html">Notebook - Création de exploitations.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-traitement-donnees-ilots.html">Méthodologie - Îlots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/04-creation-ilots.html">Notebook - Création de ilots.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-traitement-donnees-parcelles.html">Méthodologie - Parcelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/12-creation-parcelles.html">Notebook - Création de parcelles.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-traitement-donnees-engrais.html">Méthodologie - Engrais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/08-copie-engrais.html">Notebook - Copie de Engrais.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-traitement-regles-decision.html">Méthodologie - Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/10-creation-regles-decision.html">Notebook - Création des Règles de Décision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-traitement-regles-ferti.html">Méthodologie - Règles de Fertilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/11-creation-regles-ferti.html">Notebook - Création des Règles de Fertilisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Module Hydrographique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06-traitement-zone-hydro.html">Méthodologie - Zone Hydrographique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/06-creation-zh.html">Notebook - Création de ZH.shp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-traitement-contour-zh.html">Méthodologie - Contour ZH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/09-creation-contour-zh.html">Notebook - Création de contourZH.shp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilitaires</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13-utilitaires.html">Scripts Utilitaires</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/02-traitement-donnees-sols.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Méthodologie de Caractérisation des Sols pour l’Instanciation MAELIA</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-du-fichier-typedesolparzh-shp-pour-le-territoire-de-sasseme">Création du fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> pour le territoire de Sasseme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contexte-et-objectif">1. Contexte et Objectif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-des-unites-de-sol">2. Classification des Unités de Sol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origine-et-description-du-parcellaire-enrichi">2.1. Origine et Description du Parcellaire Enrichi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-consolidation-des-donnees-pedologiques">3. Étape 1 : Consolidation des Données Pédologiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-des-donnees">3.1. Sources des Données</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonisation-verticale-des-horizons">3.2. Harmonisation Verticale des Horizons</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#determination-des-valeurs-representatives-et-tableau-de-synthese">3.3. Détermination des Valeurs Représentatives et Tableau de Synthèse</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#liste-des-variables-requises-par-maelia">3.4. Liste des Variables Requises par MAELIA</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#provenance-des-donnees">3.5. Provenance des Données</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-spatialisation-et-attribution-des-proprietes">4. Étape 2 : Spatialisation et Attribution des Propriétés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-3-simplification-geometrique">5. Étape 3 : Simplification Géométrique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resultat-final">6. Résultat Final</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="methodologie-de-caracterisation-des-sols-pour-l-instanciation-maelia">
+<h1>Méthodologie de Caractérisation des Sols pour l’Instanciation MAELIA<a class="headerlink" href="#methodologie-de-caracterisation-des-sols-pour-l-instanciation-maelia" title="Link to this heading">#</a></h1>
+<section id="creation-du-fichier-typedesolparzh-shp-pour-le-territoire-de-sasseme">
+<h2>Création du fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> pour le territoire de Sasseme<a class="headerlink" href="#creation-du-fichier-typedesolparzh-shp-pour-le-territoire-de-sasseme" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="contexte-et-objectif">
+<h3>1. Contexte et Objectif<a class="headerlink" href="#contexte-et-objectif" title="Link to this heading">#</a></h3>
+<p>Dans la plateforme MAELIA, le modèle de culture AqYield s’appuie sur les caractéristiques des sols pour simuler, à un pas de temps journalier, le développement des cultures. Ces simulations intègrent les interactions dynamiques entre le sol, les conditions climatiques et les itinéraires techniques (ITK) appliqués.</p>
+<p>L’objectif de ce document est de décrire la méthodologie employée pour produire le fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code>, une couche d’information géographique qui caractérise les différents types de sols du territoire étudié et qui sert d’entrée directe pour le modèle.</p>
+</section>
+<hr class="docutils" />
+<section id="classification-des-unites-de-sol">
+<h3>2. Classification des Unités de Sol<a class="headerlink" href="#classification-des-unites-de-sol" title="Link to this heading">#</a></h3>
+<p>Pour représenter l’hétérogénéité agro-écologique du territoire, nous avons défini des unités typologiques basées sur la combinaison de trois critères distincts :</p>
+<ul class="simple">
+<li><p><strong>Le type de sol</strong> : <code class="docutils literal notranslate"><span class="pre">Dior</span></code> (dr), <code class="docutils literal notranslate"><span class="pre">Deck</span></code> (dk) ou <code class="docutils literal notranslate"><span class="pre">Deck-Mbel</span></code> (dkmb).</p></li>
+<li><p><strong>Le type de champ</strong> : champ de case (cc) ou champ de brousse (cb).</p></li>
+<li><p><strong>La présence d’arbres</strong> : avec (arbr) ou sans (sans_arbr).</p></li>
+</ul>
+<p>En raison des données disponibles pour la version actuelle, nous avons consolidé cette typologie en <strong>8 types d’îlots</strong> fonctionnels :</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dior_cb_avec_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dior_cb_sans_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dior_cc_avec_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dior_cc_sans_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dekk_cb_avec_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dekk_cb_sans_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dekk/mbel_cb_avec_arbr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dekk/mbel_cb_sans_arbr</span></code></p></li>
+</ol>
+</section>
+<section id="origine-et-description-du-parcellaire-enrichi">
+<h3>2.1. Origine et Description du Parcellaire Enrichi<a class="headerlink" href="#origine-et-description-du-parcellaire-enrichi" title="Link to this heading">#</a></h3>
+<p>Le fichier de base utilisé est <code class="docutils literal notranslate"><span class="pre">Parcellaire_Arbre_Carbone.shp</span></code>. Il s’agit d’une couche d’information géographique enrichie qui intègre l’influence des arbres (<em>Faidherbia albida</em>) au sein du parcellaire initial de Sasseme.</p>
+<p>Ce traitement géospatial complexe a été réalisé en amont par le géomaticien du projet, <strong>M. Ousmane Faye</strong>. Sa méthodologie a consisté à :</p>
+<ol class="arabic simple">
+<li><p>Cartographier les arbres de l’espèce <em>Faidherbia albida</em>.</p></li>
+<li><p>Générer des <strong>zones d’influence (tampons) de 17m de rayon</strong> autour de chaque arbre.</p></li>
+<li><p><strong>Fusionner</strong> les zones d’influence qui se chevauchaient.</p></li>
+<li><p>Intégrer ces nouvelles zones au parcellaire, en les distinguant via une colonne attributaire (<code class="docutils literal notranslate"><span class="pre">Arbre</span></code> = 1).</p></li>
+</ol>
+<p>Le rôle du notebook <strong><code class="docutils literal notranslate"><span class="pre">02a-creation-centroides.ipynb</span></code></strong> n’est donc pas de réaliser ce traitement, mais de lire ce fichier enrichi et de s’assurer que la géométrie de chaque entité est correctement interprétée pour l’étape d’échantillonnage. Il applique pour cela un <strong>traitement différencié</strong> :</p>
+<ul class="simple">
+<li><p>Pour les <strong>parcelles classiques</strong> (<code class="docutils literal notranslate"><span class="pre">Arbre</span></code> == 0), il calcule le <strong>centroïde</strong> du polygone.</p></li>
+<li><p>Pour les <strong>zones d’influence des arbres</strong> (<code class="docutils literal notranslate"><span class="pre">Arbre</span></code> == 1), il utilise les <strong>coordonnées Long/Lat</strong> de l’arbre d’origine.</p></li>
+</ul>
+<p>Ce processus garantit que chaque point d’échantillonnage final <strong>(voir 3.3)</strong> représente la localisation géographique la plus pertinente.</p>
+</section>
+<hr class="docutils" />
+<section id="etape-1-consolidation-des-donnees-pedologiques">
+<h3>3. Étape 1 : Consolidation des Données Pédologiques<a class="headerlink" href="#etape-1-consolidation-des-donnees-pedologiques" title="Link to this heading">#</a></h3>
+<p>La première étape consiste à créer une table de synthèse décrivant les propriétés physico-chimiques de chaque type de sol, conformément aux exigences de MAELIA.</p>
+<section id="sources-des-donnees">
+<h4>3.1. Sources des Données<a class="headerlink" href="#sources-des-donnees" title="Link to this heading">#</a></h4>
+<p>Les paramètres ont été compilés à partir d’une revue de plusieurs sources de données :</p>
+<ul class="simple">
+<li><p>Travaux académiques (thèses et publications scientifiques).</p></li>
+<li><p>Bases de données géospatiales ouvertes (OpenLandMap, iSDA Africa).</p></li>
+<li><p>Données de projets de recherche (Cirad Dataverse).</p></li>
+</ul>
+<p>Chaque valeur dans la table de synthèse finale sera explicitement sourcée.</p>
+</section>
+<section id="harmonisation-verticale-des-horizons">
+<h4>3.2. Harmonisation Verticale des Horizons<a class="headerlink" href="#harmonisation-verticale-des-horizons" title="Link to this heading">#</a></h4>
+<p>En raison des données disponibles, nous avons modélisé le profil de sol sur une <strong>profondeur de 60 cm</strong>, divisée en <strong>deux horizons</strong> : 0-30 cm et 30-60 cm.</p>
+<p>Certaines données sources présentaient des horizons différents (ex: 0-20 cm, 20-50 cm). Pour harmoniser ces informations, une <strong>méthode de calcul pro-rata</strong> a été appliquée pour estimer les valeurs sur nos horizons cibles. Lorsque cette approche n’était pas possible, la valeur la plus représentative a été conservée, et cette approximation est documentée.</p>
+</section>
+<section id="determination-des-valeurs-representatives-et-tableau-de-synthese">
+<h4>3.3. Détermination des Valeurs Représentatives et Tableau de Synthèse<a class="headerlink" href="#determination-des-valeurs-representatives-et-tableau-de-synthese" title="Link to this heading">#</a></h4>
+<p>Pour chaque paramètre pédologique (teneur en argile, sable, etc.) issu des bases de données spatialisées, une valeur représentative pour chaque type d’îlot a été calculée en suivant une méthode d’échantillonnage par centroïdes :</p>
+<ol class="arabic simple">
+<li><p><strong>Génération des centroïdes</strong> : Le centroïde (le centre géométrique) de chaque parcelle a été calculé.</p></li>
+<li><p><strong>Extraction des valeurs</strong> : La valeur du paramètre a été extraite à l’emplacement exact de chaque centroïde.</p></li>
+<li><p><strong>Calcul de la moyenne</strong> : La moyenne de toutes les valeurs extraites pour un même type d’îlot a été calculée. Cette moyenne est considérée comme la valeur représentative pour ce type.</p></li>
+</ol>
+<p>Le résultat de cette étape est un <strong>tableau de synthèse</strong> où chaque ligne représente l’un des 8 types d’îlots et chaque colonne correspond à un paramètre requis par MAELIA pour chaque horizon.</p>
+</section>
+</section>
+<section id="liste-des-variables-requises-par-maelia">
+<h3>3.4. Liste des Variables Requises par MAELIA<a class="headerlink" href="#liste-des-variables-requises-par-maelia" title="Link to this heading">#</a></h3>
+<p>La description des sols dans MAELIA nécessite un ensemble de variables pédologiques. Certaines de ces variables sont globales, tandis que d’autres sont renseignées <strong>par couche de sol</strong>, numérotées de 1 à 2 dans notre cas.</p>
+<p><strong>Remarques importantes :</strong></p>
+<ul class="simple">
+<li><p>Les variables indexées <code class="docutils literal notranslate"><span class="pre">[1–2]</span></code> sont définies pour chaque couche.</p></li>
+<li><p>Il est indispensable de connaître le <strong>nombre de couches</strong> présentes pour chaque type de sol.</p></li>
+<li><p>L’<strong>épaisseur de chaque couche</strong> est donnée par la variable <code class="docutils literal notranslate"><span class="pre">P[n]</span></code>.</p></li>
+<li><p>La <strong>somme des épaisseurs</strong> (<code class="docutils literal notranslate"><span class="pre">P[n]</span></code>) doit être cohérente avec la profondeur totale <code class="docutils literal notranslate"><span class="pre">PRO</span></code>.</p></li>
+<li><p>Les couches doivent être renseignées <strong>dans l’ordre</strong>, de la surface vers la profondeur.</p></li>
+</ul>
+<p>Le tableau ci-dessous présente la liste des variables nécessaires à la description des sols pour les simulations.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Variable</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Identifiants</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ID_SOL</span></code></p></td>
+<td class="text-left"><p>Identifiant unique pour chaque type de sol (ex: 1, 2, 3…).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ID_ZH</span></code></p></td>
+<td class="text-left"><p>Identifiant de la Zone Hydrographique. Fixé à <strong>1</strong> pour l’ensemble du territoire.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">STU_DOM</span></code></p></td>
+<td class="text-left"><p><em>Soil Typological Unit</em> dominante. Identifiant textuel du type de sol.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code></p></td>
+<td class="text-left"><p>Nom de la zone pédologique (ex: <code class="docutils literal notranslate"><span class="pre">dior_cb_sans_arbr</span></code>, <code class="docutils literal notranslate"><span class="pre">dekk_cb_sans_arbr</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Variables Globales</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PIRM</span></code></p></td>
+<td class="text-left"><p>Infiltrabilité du sol (mm/h) — capacité d’infiltration de l’eau en surface.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PRO</span></code></p></td>
+<td class="text-left"><p>Profondeur totale du sol utile (en cm).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CSTRU</span></code></p></td>
+<td class="text-left"><p>Note experte (entre 0 et 1) représentant la qualité structurale globale du sol.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Variables par Couche</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">P[1–2]</span></code></p></td>
+<td class="text-left"><p>Profondeur ou épaisseur (en cm) de la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ARG[1–2]</span></code></p></td>
+<td class="text-left"><p>Teneur en argile (%) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EG[1–2]</span></code></p></td>
+<td class="text-left"><p>Teneur en éléments grossiers (%) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">DAH[1–2]</span></code></p></td>
+<td class="text-left"><p>Densité apparente (g/cm³) de la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">RUPRH[1–2]</span></code></p></td>
+<td class="text-left"><p>Réserve utile potentielle en eau (mm) de la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">KSAT[1–2]</span></code></p></td>
+<td class="text-left"><p>Conductivité hydraulique à saturation (mm/h) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PH[1–2]</span></code></p></td>
+<td class="text-left"><p>Valeur du pH (acidité) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CN[1–2]</span></code></p></td>
+<td class="text-left"><p>Rapport carbone/azote (C/N) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CAL[1–2]</span></code></p></td>
+<td class="text-left"><p>Teneur en calcaire (%) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MO[1–2]</span></code></p></td>
+<td class="text-left"><p>Teneur en matière organique (%) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SAB[1–2]</span></code></p></td>
+<td class="text-left"><p>Teneur en sable (%) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HCC[1–2]</span></code></p></td>
+<td class="text-left"><p>Humidité volumique à la capacité au champ (%) dans la couche <em>n</em>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HPFP[1–2]</span></code></p></td>
+<td class="text-left"><p>Humidité volumique au point de flétrissement (%) dans la croche <em>n</em>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="provenance-des-donnees">
+<h3>3.5. Provenance des Données<a class="headerlink" href="#provenance-des-donnees" title="Link to this heading">#</a></h3>
+<p>La table ci-dessous détaille l’origine de chaque donnée utilisée pour construire les variables requises par MAELIA, organisées par type.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Variable MAELIA</p></th>
+<th class="head text-left"><p>Sources Principales</p></th>
+<th class="head text-left"><p>Traitement / Auteurs</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Identifiants</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code></p></td>
+<td class="text-left"><p>1. <code class="docutils literal notranslate"><span class="pre">Parcellaire_Arbre_Carbone.shp</span></code> <br> 2. <code class="docutils literal notranslate"><span class="pre">malou_0_30.csv</span></code></p></td>
+<td class="text-left"><p>Combinaison d’attributs pour créer l’identifiant. <br> <em>(Sources: O. Faye &amp; Thèse O. Malou)</em></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ID_ZH</span></code></p></td>
+<td class="text-left"><p>Dire d’expert</p></td>
+<td class="text-left"><p>Valeur fixe <code class="docutils literal notranslate"><span class="pre">'SSM1'</span></code> (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">STU_DOM</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ZONE_PEDO</span></code></p></td>
+<td class="text-left"><p>Classification (‘sableux’/’argileux’) (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ID_SOL</span></code></p></td>
+<td class="text-left"><p>Calculée</p></td>
+<td class="text-left"><p>Combinaison des identifiants (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Variables Globales</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PIRM</span></code></p></td>
+<td class="text-left"><p>Thèse de Waly Faye</p></td>
+<td class="text-left"><p>Estimations basées sur des hypothèses (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PRO</span></code></p></td>
+<td class="text-left"><p>Hypothèse de modélisation</p></td>
+<td class="text-left"><p>Valeur fixe <code class="docutils literal notranslate"><span class="pre">60</span></code> cm (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CSTRU</span></code></p></td>
+<td class="text-left"><p>Dire d’expert</p></td>
+<td class="text-left"><p>Valeur fixe <code class="docutils literal notranslate"><span class="pre">0.5</span></code> (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Variables par Couche</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">P1</span></code>, <code class="docutils literal notranslate"><span class="pre">P2</span></code></p></td>
+<td class="text-left"><p>Hypothèse de modélisation</p></td>
+<td class="text-left"><p>Valeurs fixes <code class="docutils literal notranslate"><span class="pre">30</span></code> et <code class="docutils literal notranslate"><span class="pre">60</span></code> cm (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ARG1</span></code>, <code class="docutils literal notranslate"><span class="pre">ARG2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://zenodo.org/records/15528401">OpenLandMap</a></p></td>
+<td class="text-left"><p>Extraction par centroïdes (notebook <code class="docutils literal notranslate"><span class="pre">02b</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SAB1</span></code>, <code class="docutils literal notranslate"><span class="pre">SAB2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://zenodo.org/records/15528413">OpenLandMap</a></p></td>
+<td class="text-left"><p>Extraction par centroïdes (notebook <code class="docutils literal notranslate"><span class="pre">02b</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">DAH1</span></code>, <code class="docutils literal notranslate"><span class="pre">DAH2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/bd.core_iso.11272.2017.g.cm3_m_30m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250204.tif">OpenLandMap</a></p></td>
+<td class="text-left"><p>Extraction et correction du facteur d’échelle (<strong><code class="docutils literal notranslate"><span class="pre">/100</span></code></strong>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">C1</span></code>, <code class="docutils literal notranslate"><span class="pre">C2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://s3.opengeohub.org/global-soil/global_soil_props_v20250204_mosaics/oc_iso.10694.1995.wpml_m_30m_b0cm..30cm_20200101_20221231_g_epsg.4326_v20250204.tif">OpenLandMap</a></p></td>
+<td class="text-left"><p>Extraction, correction d’échelle (<strong><code class="docutils literal notranslate"><span class="pre">/10</span></code></strong>), puis conversion en <strong>%</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MO1</span></code>, <code class="docutils literal notranslate"><span class="pre">MO2</span></code></p></td>
+<td class="text-left"><p>Calculée</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">%</span> <span class="pre">*</span> <span class="pre">1.724</span></code> (Facteur de Van Bemmelen).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">N1</span></code>, <code class="docutils literal notranslate"><span class="pre">N2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://isdasoil.s3.amazonaws.com/soil_data/nitrogen_total/nitrogen_total.tif">iSDA Africa Raster</a></p></td>
+<td class="text-left"><p>Correction d’échelle (<strong><code class="docutils literal notranslate"><span class="pre">/100</span></code></strong>) et harmonisation pro-rata.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CN1</span></code>, <code class="docutils literal notranslate"><span class="pre">CN2</span></code></p></td>
+<td class="text-left"><p>Calculée</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">(g/kg)</span> <span class="pre">/</span> <span class="pre">N</span> <span class="pre">(g/kg)</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PH1</span></code>, <code class="docutils literal notranslate"><span class="pre">PH2</span></code></p></td>
+<td class="text-left"><p>iSDA Africa (API)</p></td>
+<td class="text-left"><p>Requêtes API et harmonisation pro-rata.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HCC1</span></code>, <code class="docutils literal notranslate"><span class="pre">HCC2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://doi.org/10.18167/DVN1/SGNSII">Cirad Dataverse</a></p></td>
+<td class="text-left"><p>Extraction (fraction), harmonisation pro-rata, puis conversion en <strong>%</strong>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HPFP1</span></code>, <code class="docutils literal notranslate"><span class="pre">HPFP2</span></code></p></td>
+<td class="text-left"><p><a class="reference external" href="https://doi.org/10.18167/DVN1/SGNSII">Cirad Dataverse</a></p></td>
+<td class="text-left"><p>Extraction (fraction), harmonisation pro-rata, puis conversion en <strong>%</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">RUPRH1</span></code>, <code class="docutils literal notranslate"><span class="pre">RUPRH2</span></code></p></td>
+<td class="text-left"><p>Calculée</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">(HCC_fraction</span> <span class="pre">-</span> <span class="pre">HPFP_fraction)</span> <span class="pre">*</span> <span class="pre">épaisseur</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">KSAT1</span></code>, <code class="docutils literal notranslate"><span class="pre">KSAT2</span></code></p></td>
+<td class="text-left"><p>Thèse de Waly Faye</p></td>
+<td class="text-left"><p>Estimations et répartition par couche (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EG1</span></code>, <code class="docutils literal notranslate"><span class="pre">EG2</span></code></p></td>
+<td class="text-left"><p>Dire d’expert</p></td>
+<td class="text-left"><p>Valeur fixe <code class="docutils literal notranslate"><span class="pre">0</span></code> (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CAL1</span></code>, <code class="docutils literal notranslate"><span class="pre">CAL2</span></code></p></td>
+<td class="text-left"><p>Dire d’expert</p></td>
+<td class="text-left"><p>Valeur fixe <code class="docutils literal notranslate"><span class="pre">0</span></code> (notebook <code class="docutils literal notranslate"><span class="pre">02c</span></code>).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="etape-2-spatialisation-et-attribution-des-proprietes">
+<h3>4. Étape 2 : Spatialisation et Attribution des Propriétés<a class="headerlink" href="#etape-2-spatialisation-et-attribution-des-proprietes" title="Link to this heading">#</a></h3>
+<p>L’objectif de cette étape est de transcrire les informations de la table de synthèse sur une carte.</p>
+<ol class="arabic simple">
+<li><p><strong>Jointure attributaire</strong> : La table de synthèse est jointe numériquement au parcellaire existant (une couche géographique de polygones représentant les parcelles).</p></li>
+<li><p><strong>Attribution des données</strong> : Chaque parcelle se voit ainsi attribuer l’ensemble des caractéristiques pédologiques correspondant à son type.</p></li>
+<li><p><strong>Ajout d’un identifiant unique</strong> : Un identifiant unique est assigné à chaque parcelle pour assurer la traçabilité.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="etape-3-simplification-geometrique">
+<h3>5. Étape 3 : Simplification Géométrique<a class="headerlink" href="#etape-3-simplification-geometrique" title="Link to this heading">#</a></h3>
+<p>Afin d’optimiser la visualisation et potentiellement les temps de calcul dans MAELIA, une dernière étape de traitement géométrique est réalisée.</p>
+<ul class="simple">
+<li><p><strong>Regroupement (Dissolve)</strong> : Les parcelles adjacentes partageant le même type de sol sont fusionnées en un polygone unique plus grand.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="resultat-final">
+<h3>6. Résultat Final<a class="headerlink" href="#resultat-final" title="Link to this heading">#</a></h3>
+<p>Le produit final de ce traitement est le fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code>. Il s’agit d’une couche de polygones où chaque entité géographique représente une zone de sol homogène et contient, dans sa table attributaire, l’ensemble des paramètres pédologiques nécessaires à la simulation.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../notebooks/05-creation-polygone-meteo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Création du Fichier du Polygone Météo (<code class="docutils literal notranslate"><span class="pre">polygoneMeteoFrance.shp</span></code>)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../notebooks/02a-creation-centroides.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Création du Fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> : Points de collecte</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-du-fichier-typedesolparzh-shp-pour-le-territoire-de-sasseme">Création du fichier <code class="docutils literal notranslate"><span class="pre">typeDeSolParZH.shp</span></code> pour le territoire de Sasseme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contexte-et-objectif">1. Contexte et Objectif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-des-unites-de-sol">2. Classification des Unités de Sol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origine-et-description-du-parcellaire-enrichi">2.1. Origine et Description du Parcellaire Enrichi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-consolidation-des-donnees-pedologiques">3. Étape 1 : Consolidation des Données Pédologiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-des-donnees">3.1. Sources des Données</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonisation-verticale-des-horizons">3.2. Harmonisation Verticale des Horizons</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#determination-des-valeurs-representatives-et-tableau-de-synthese">3.3. Détermination des Valeurs Représentatives et Tableau de Synthèse</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#liste-des-variables-requises-par-maelia">3.4. Liste des Variables Requises par MAELIA</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#provenance-des-donnees">3.5. Provenance des Données</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-spatialisation-et-attribution-des-proprietes">4. Étape 2 : Spatialisation et Attribution des Propriétés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-3-simplification-geometrique">5. Étape 3 : Simplification Géométrique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resultat-final">6. Résultat Final</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cheikhou Akhmed Kane
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
