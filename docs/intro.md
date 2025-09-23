@@ -1,4 +1,4 @@
-# Introduction : Instanciation du Territoire de Diohine
+# Introduction
 
 Ce document interactif détaille, étape par étape, le processus d'instanciation du territoire de Diohine (village de Sasseme) pour la plateforme de simulation MAELIA. Il regroupe les outils, scripts et documents nécessaires pour passer des données brutes aux fichiers finaux requis par le modèle.
 
@@ -13,7 +13,7 @@ Le résultat de ce travail est une arborescence de fichiers prête à l'emploi p
 Le fichier `especesCultivees.csv` n'est pas inclus dans ce zip.
 ```
 
-[**Télécharger les données finales (.zip)**](_static/downloads/includes_sassemeV1-latest.zip)
+[**Télécharger les données finales (.zip)**](/_static/downloads/includes_sassemeV1-latest.zip)
 
 ---
 
