@@ -6,6 +6,8 @@ parts:
     chapters:
     - file: docs/01-traitement-donnees-climat.md
       title: Données Climatiques
+    - file: notebooks/01-traitement-climat.ipynb
+      title: Création des Fichiers Meteo (annee.csv)
     - file: docs/05-traitement-polygone-meteo.md
       title: Méthodologie - Polygone Météo
     - file: notebooks/05-creation-polygone-meteo.ipynb
