@@ -1,6 +1,6 @@
 # Introduction
 
-Ce livre interactif détaille, étape par étape, le processus d'instanciation du territoire de Diohine (village de Sasseme) pour la plateforme de simulation MAELIA.
+Ce livre interactif détaille, étape par étape, le processus d'instanciation du village de Diohine (quartier de Sasseme) sur la plateforme de simulation MAELIA.
 
 MAELIA est une plateforme de simulation multi-agents dédiée à la modélisation des systèmes agro-environnementaux. Ce projet vise à collecter et/ou organiser les données brutes, les traiter, et les structurer dans le format attendu par MAELIA, spécifiquement pour les répertoires `modeleAgricole`, `modeleCommun`, et `modeleHydrographique`.
 
@@ -19,7 +19,7 @@ Le fichier `especesCultivees.csv` n'est pas inclus dans ce zip.
 
 Cette première version de l'instanciation se concentre sur un périmètre précis :
 
-* **Acteurs :** **44 agriculteurs** résidant dans le quartier de Sasseme.
+* **Acteurs :** **44 agriculteurs** résidant dans le quartier de Sasseme classifiés en deux types: `avec_UTL` et `sans_UTL`.
 * **Parcellaire de base :** **420 parcelles** initiales exploitées par ces agriculteurs.
 * **Enrichissement agro-écologique :** Le parcellaire a été enrichi en intégrant les zones d'influence des arbres (*Faidherbia Albida*), ce qui a porté le nombre total d'unités spatiales distinctes à **749 polygones**.
 * **Classification des sols :** Ces unités ont été classifiées en **8 types de sols** en croisant trois critères : le type de sol local (`dior`, `dekk`, `dekkMbel`), le type de champ (`case` ou `brousse`) et la présence d'arbres.
