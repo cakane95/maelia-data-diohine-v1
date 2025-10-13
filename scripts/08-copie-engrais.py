@@ -156,10 +156,6 @@ def main():
         print("✅ COPIE TERMINÉE AVEC SUCCÈS")
         print("=" * 70)
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le contenu du fichier copié")
-        print("  2. Le fichier est prêt pour le module agricole MAELIA")
-
     except FileNotFoundError as e:
         print(f"\n❌ Erreur : Fichier source introuvable")
         print(f"   {e}")

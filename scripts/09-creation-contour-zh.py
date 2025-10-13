@@ -319,10 +319,6 @@ def main():
         print(f"  1. contourZH.shp : {surface_ha:.2f} ha")
         print(f"  2. donneesMNT_ZH.csv : Données d'altitude")
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier les fichiers dans QGIS ou autre SIG")
-        print("  2. Intégrer dans le module hydrographique MAELIA")
-
     except FileNotFoundError as e:
         print(f"\n❌ Erreur : Fichier introuvable")
         print(f"   {e}")

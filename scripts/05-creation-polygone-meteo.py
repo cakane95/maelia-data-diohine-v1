@@ -242,11 +242,6 @@ def main():
         print("✅ TRAITEMENT TERMINÉ AVEC SUCCÈS")
         print("=" * 70)
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le shapefile dans QGIS ou autre SIG")
-        print("  2. Ce polygone sera utilisé pour associer les données climatiques")
-        print("  3. Intégrer dans le module météo de MAELIA")
-
     except Exception as e:
         print(f"\n❌ Erreur lors du traitement : {e}")
         import traceback

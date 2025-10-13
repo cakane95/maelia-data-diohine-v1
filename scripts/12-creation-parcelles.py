@@ -333,11 +333,6 @@ def main():
         print("  • Format ID_PARCELL : ID_ILOT_001")
         print("  • Séquences assignées aléatoirement (seed=42)")
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le shapefile dans QGIS ou autre SIG")
-        print("  2. Ajuster les séquences si nécessaire")
-        print("  3. Intégrer parcelles.shp dans le module agricole MAELIA")
-
     except Exception as e:
         print(f"\n❌ Erreur lors du traitement : {e}")
         import traceback

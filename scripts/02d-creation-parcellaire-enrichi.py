@@ -296,11 +296,6 @@ def main():
         print("✅ TRAITEMENT TERMINÉ AVEC SUCCÈS")
         print("=" * 70)
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le shapefile enrichi dans QGIS ou autre SIG")
-        print("  2. Utiliser ce fichier pour créer typeDeSolParZH.shp")
-        print("  3. Ce fichier sert de base géométrique pour la consolidation finale")
-
     except Exception as e:
         print(f"\n❌ Erreur lors du traitement : {e}")
         import traceback

@@ -411,11 +411,6 @@ def main():
         print("✅ TRAITEMENT TERMINÉ AVEC SUCCÈS")
         print("=" * 70)
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le fichier généré")
-        print("  2. Intégrer dans le module agricole MAELIA")
-        print("  3. Les 6 ITK sont prêts pour la simulation")
-
     except FileNotFoundError as e:
         print(f"\n❌ Erreur : Fichier introuvable")
         print(f"   {e}")

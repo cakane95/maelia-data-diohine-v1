@@ -10,8 +10,9 @@ data/sols/raster/raw/
 # Ignorer les shapefiles traités ou intermédiaires
 data/sols/shapefiles/processed/
 
-# Ignorer les fichiers dans le dossier tests
+# Ignorer les fichiers dans les dossiers
 tests/
+outputs/
 
 # Ignorer le dossier des fichiers de distribution
 dist/

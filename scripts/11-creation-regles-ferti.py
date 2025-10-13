@@ -274,11 +274,6 @@ def main():
         print(f"  • Période : 15 juin - 30 août (jours 166-242)")
         print(f"  • Nombre de passages : 1")
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le fichier généré")
-        print("  2. Ajuster les paramètres si nécessaire")
-        print("  3. Intégrer dans le module agricole MAELIA")
-
     except Exception as e:
         print(f"\n❌ Erreur lors du traitement : {e}")
         import traceback

@@ -12,7 +12,7 @@ Ce script :
 - Récupère l'azote et le pH via l'API iSDA Africa
 - Extrait les propriétés hydriques (HCC, HPFP, RUPRH) depuis Cirad Dataverse
 - Calcule le rapport C/N
-- Agrège les données par ZONE_PEDO (moyenne)
+- Filtre et agrège les données par ZONE_PEDO (moyenne)
 - Exporte la table de synthèse finale
 """
 
@@ -28,6 +28,8 @@ import gzip
 import time
 import requests
 from getpass import getpass
+import os
+from dotenv import load_dotenv
 
 # Supprimer les avertissements
 warnings.filterwarnings('ignore')
@@ -164,7 +166,7 @@ def extract_values_local_gz(local_file_path, gdf, band_number=1):
                     row, col = src.index(pt.x, pt.y)
                     window = Window(col, row, 1, 1)
                     data = src.read(band_number, window=window)
-                    values.append(data[0, 0])
+                    values.append(float(data[0, 0]))
                 except IndexError:
                     values.append(None)
 
@@ -174,6 +176,35 @@ def extract_values_local_gz(local_file_path, gdf, band_number=1):
 # ============================================================================
 # FONCTIONS D'EXTRACTION - API iSDA
 # ============================================================================
+def charger_credentials_isda():
+    """
+    Charge les identifiants iSDA depuis le fichier .env ou demande à l'utilisateur.
+
+    Returns:
+        tuple: (username, password)
+    """
+    # Charger les variables d'environnement depuis .env
+    load_dotenv()
+
+    username = os.getenv('ISDA_USERNAME')
+    password = os.getenv('ISDA_PASSWORD')
+
+    # Si les identifiants ne sont pas dans .env, demander interactivement
+    if not username or not password:
+        print("\n⚠️  Identifiants iSDA non trouvés dans le fichier .env")
+        print("   Vous pouvez créer un fichier .env à la racine du projet avec:")
+        print("   ISDA_USERNAME=votre_email@example.com")
+        print("   ISDA_PASSWORD=votre_mot_de_passe")
+        print("\n   Ou les entrer maintenant de manière interactive:\n")
+
+        username = input("📧 Email iSDA: ")
+        password = getpass("🔑 Mot de passe iSDA: ")
+    else:
+        print("\n✓ Identifiants iSDA chargés depuis le fichier .env")
+
+    return username, password
+
+
 def obtenir_token_isda(username, password):
     """
     Obtient un token d'accès pour l'API iSDA Africa.
@@ -218,6 +249,7 @@ def get_isda_property_reproject(gdf_source, token, property_name, depth="0-20"):
         return None
 
     print(f"  🌐 Extraction API iSDA: {property_name} ({depth} cm)")
+    print(f"    → Reprojection en EPSG:4326...")
     gdf_wgs84 = gdf_source.to_crs(epsg=4326)
 
     base_url = "https://api.isda-africa.com"
@@ -227,6 +259,7 @@ def get_isda_property_reproject(gdf_source, token, property_name, depth="0-20"):
     valeurs_extraites = []
     total = len(gdf_wgs84)
 
+    print(f"    → Début de la récupération pour '{property_name}'...")
     for index, row in gdf_wgs84.iterrows():
         params = {
             "lat": row.geometry.y,
@@ -244,10 +277,11 @@ def get_isda_property_reproject(gdf_source, token, property_name, depth="0-20"):
         except Exception:
             valeurs_extraites.append(None)
 
-        if (index + 1) % 100 == 0:
-            print(f"    {index + 1}/{total} points traités")
+        if (index + 1) % 50 == 0:
+            print(f"      ... {index + 1}/{total} points traités")
         time.sleep(0.05)
 
+    print(f"    ✓ Extraction terminée")
     return valeurs_extraites
 
 
@@ -315,6 +349,7 @@ def extraire_openlandmap(gdf):
 
     # Densité apparente (avec facteur d'échelle /100)
     print("\n🔹 Densité apparente (g/cm³)")
+    print("  → Application du facteur d'échelle (/100)")
     dah_brut_0_30 = extract_values(rasters['BD_0_30'], gdf)
     dah_brut_30_60 = extract_values(rasters['BD_30_60'], gdf)
     gdf['DAH1'] = [val / 100 if val is not None else None for val in dah_brut_0_30]
@@ -322,6 +357,7 @@ def extraire_openlandmap(gdf):
 
     # Carbone et Matière Organique (avec facteurs d'échelle)
     print("\n🔹 Carbone et matière organique (%)")
+    print("  → Application des facteurs d'échelle (/10 puis /10 pour %)")
     soc_brut_0_30 = extract_values(rasters['SOC_0_30'], gdf)
     soc_brut_30_60 = extract_values(rasters['SOC_30_60'], gdf)
 
@@ -332,12 +368,14 @@ def extraire_openlandmap(gdf):
                  if val is not None else None for val in soc_brut_30_60]
 
     # Calcul de la matière organique
+    print("  → Calcul de la matière organique (facteur Van Bemmelen 1.724)")
     gdf['MO1'] = gdf['C1'] * VAN_BEMMELEN_FACTOR
     gdf['MO2'] = gdf['C2'] * VAN_BEMMELEN_FACTOR
 
     print(f"\n✓ OpenLandMap terminé")
     print(f"  Moyenne C1: {gdf['C1'].mean():.4f}%")
     print(f"  Moyenne MO1: {gdf['MO1'].mean():.4f}%")
+    print(f"  Dimensions: {gdf.shape[0]} lignes × {gdf.shape[1]} colonnes")
 
     return gdf
 
@@ -371,11 +409,13 @@ def extraire_isda_africa(gdf, username, password):
     n_raw_20_50 = extract_values(n_url, gdf, band_number=2)
 
     # Facteur d'échelle /100
+    print("  → Application du facteur d'échelle (/100)")
     n_gkg_0_20 = [val / 100 if val is not None else None for val in n_raw_0_20]
     n_gkg_20_50 = [
         val / 100 if val is not None else None for val in n_raw_20_50]
 
     # Harmonisation
+    print("  → Harmonisation des horizons (pro-rata)")
     gdf['N1'] = [calculer_horizon_0_30(v1, v2)
                  for v1, v2 in zip(n_gkg_0_20, n_gkg_20_50)]
     gdf['N2'] = [calculer_horizon_30_60(v) for v in n_gkg_20_50]
@@ -388,6 +428,7 @@ def extraire_isda_africa(gdf, username, password):
         gdf, token, 'ph', depth="20-50")
 
     # Harmonisation
+    print("  → Harmonisation des horizons (pro-rata)")
     gdf['PH1'] = [calculer_horizon_0_30(v1, v2) for v1, v2 in zip(
         ph_values_0_20, ph_values_20_50)]
     gdf['PH2'] = [calculer_horizon_30_60(v) for v in ph_values_20_50]
@@ -395,6 +436,7 @@ def extraire_isda_africa(gdf, username, password):
     print(f"\n✓ iSDA Africa terminé")
     print(f"  Moyenne N1: {gdf['N1'].mean():.4f} g/kg")
     print(f"  Moyenne PH1: {gdf['PH1'].mean():.4f}")
+    print(f"  Dimensions: {gdf.shape[0]} lignes × {gdf.shape[1]} colonnes")
 
     return gdf
 
@@ -429,12 +471,13 @@ def extraire_cirad_dataverse(gdf, base_dir):
         try:
             valeurs = extract_values_local_gz(chemin, gdf)
             gdf[item['col']] = valeurs
+            print(f"  ✓ Colonne '{item['col']}' ajoutée")
         except Exception as e:
             print(f"  ❌ Erreur pour {item['nom']}: {e}")
             sys.exit(1)
 
     # Harmonisation
-    print("\n🔹 Harmonisation des horizons")
+    print("\n🔹 Harmonisation des horizons (pro-rata)")
     hcc_fraction1 = [calculer_horizon_0_30(
         v1, v2) for v1, v2 in zip(gdf['hcc_0_20'], gdf['hcc_20_50'])]
     hcc_fraction2 = [calculer_horizon_30_60(v) for v in gdf['hcc_20_50']]
@@ -450,6 +493,7 @@ def extraire_cirad_dataverse(gdf, base_dir):
               for hcc, hpfp in zip(hcc_fraction2, hpfp_fraction2)]
 
     # Conversion en pourcentage pour HCC et HPFP
+    print("\n🔹 Création des colonnes finales (format MAELIA)")
     gdf['HCC1'] = [v * 100 if v is not None else None for v in hcc_fraction1]
     gdf['HCC2'] = [v * 100 if v is not None else None for v in hcc_fraction2]
     gdf['HPFP1'] = [v * 100 if v is not None else None for v in hpfp_fraction1]
@@ -458,12 +502,15 @@ def extraire_cirad_dataverse(gdf, base_dir):
     gdf['RUPRH2'] = ruprh2
 
     # Nettoyage des colonnes temporaires
+    print("\n🔹 Suppression des colonnes intermédiaires")
     gdf = gdf.drop(columns=['hcc_0_20', 'hcc_20_50',
                    'hpfp_0_20', 'hpfp_20_50'])
 
     print(f"\n✓ Cirad Dataverse terminé")
     print(f"  Moyenne HCC1: {gdf['HCC1'].mean():.2f}%")
+    print(f"  Moyenne HPFP1: {gdf['HPFP1'].mean():.2f}%")
     print(f"  Moyenne RUPRH1: {gdf['RUPRH1'].mean():.2f} mm")
+    print(f"  Dimensions: {gdf.shape[0]} lignes × {gdf.shape[1]} colonnes")
 
     return gdf
 
@@ -478,13 +525,17 @@ def calculer_rapport_cn(gdf):
     Returns:
         GeoDataFrame: GeoDataFrame avec CN1 et CN2
     """
-    print("\n🔹 Calcul du rapport C/N")
+    print("\n" + "="*70)
+    print("CALCUL DU RAPPORT C/N")
+    print("="*70)
 
     # Conversion N en pourcentage
+    print("  → Conversion de l'azote en % (g/kg → %)")
     gdf['N1_pct'] = gdf['N1'] / 10
     gdf['N2_pct'] = gdf['N2'] / 10
 
     # Calcul du rapport
+    print("  → Calcul du rapport C/N")
     gdf['CN1'] = gdf['C1'] / gdf['N1_pct']
     gdf['CN2'] = gdf['C2'] / gdf['N2_pct']
 
@@ -492,7 +543,9 @@ def calculer_rapport_cn(gdf):
     gdf = gdf.replace([np.inf, -np.inf], np.nan)
     gdf = gdf.drop(columns=['N1_pct', 'N2_pct'])
 
-    print(f"✓ Rapport C/N calculé (moyenne CN1: {gdf['CN1'].mean():.2f})")
+    print(f"\n✓ Rapport C/N calculé")
+    print(f"  Moyenne CN1: {gdf['CN1'].mean():.2f}")
+    print(f"  Dimensions: {gdf.shape[0]} lignes × {gdf.shape[1]} colonnes")
 
     return gdf
 
@@ -507,7 +560,9 @@ def filtrer_zones_pedo_valides(gdf):
     Returns:
         GeoDataFrame: GeoDataFrame filtré
     """
-    print("\n🔹 Filtrage des ZONE_PEDO valides")
+    print("\n" + "="*70)
+    print("FILTRAGE DES ZONE_PEDO VALIDES")
+    print("="*70)
 
     zones_valides = [
         'dior_cb_avec_arbr',
@@ -520,13 +575,20 @@ def filtrer_zones_pedo_valides(gdf):
         'dekk/mbel_cb_sans_arbr'
     ]
 
+    print("\n📊 Avant le nettoyage:")
+    print(f"  Nombre total de lignes: {len(gdf)}")
+    print("\n  Répartition des ZONE_PEDO:")
+    for zone, count in gdf['ZONE_PEDO'].value_counts().items():
+        status = "✓" if zone in zones_valides else "✗"
+        print(f"    {status} {zone}: {count}")
+
     initial = len(gdf)
     gdf_filtre = gdf[gdf['ZONE_PEDO'].isin(zones_valides)].copy()
     final = len(gdf_filtre)
 
-    print(f"  Avant: {initial} lignes")
-    print(f"  Après: {final} lignes")
-    print(f"  Supprimées: {initial - final} lignes")
+    print(f"\n📊 Après le nettoyage:")
+    print(f"  Lignes conservées: {final}")
+    print(f"  Lignes supprimées: {initial - final}")
 
     return gdf_filtre
 
@@ -541,7 +603,9 @@ def agreger_par_zone_pedo(gdf):
     Returns:
         DataFrame: Table de synthèse agrégée
     """
-    print("\n🔹 Agrégation par ZONE_PEDO (moyenne)")
+    print("\n" + "="*70)
+    print("AGRÉGATION PAR ZONE_PEDO")
+    print("="*70)
 
     colonnes_numeriques = [
         'ARG1', 'ARG2', 'SAB1', 'SAB2', 'DAH1', 'DAH2',
@@ -551,14 +615,20 @@ def agreger_par_zone_pedo(gdf):
     ]
 
     # Conversion en numérique
+    print("  → Conversion des colonnes en numérique")
     for col in colonnes_numeriques:
         gdf[col] = pd.to_numeric(gdf[col], errors='coerce')
 
     # Agrégation
+    print("  → Calcul des moyennes par ZONE_PEDO")
     df_agrege = gdf.groupby('ZONE_PEDO')[
         colonnes_numeriques].mean().reset_index()
 
-    print(f"✓ {len(df_agrege)} ZONE_PEDO distinctes")
+    print(f"\n✓ Agrégation terminée")
+    print(f"  {len(df_agrege)} ZONE_PEDO distinctes")
+    print("\n  Répartition finale:")
+    for _, row in df_agrege.iterrows():
+        print(f"    • {row['ZONE_PEDO']}")
 
     return df_agrege
 
@@ -599,14 +669,26 @@ def main():
         # 2. Extraction OpenLandMap
         gdf_points = extraire_openlandmap(gdf_points)
 
+        # Sauvegarde intermédiaire après OpenLandMap
+        print(f"\n💾 Sauvegarde intermédiaire après OpenLandMap...")
+        output_csv_path.parent.mkdir(parents=True, exist_ok=True)
+        gdf_points.to_csv(output_csv_path, index=False, sep=',')
+        print(f"  ✓ {output_csv_path}")
+
         # 3. Extraction iSDA Africa (avec authentification)
         print("\n" + "="*70)
         print("AUTHENTIFICATION iSDA")
         print("="*70)
-        username = input("📧 Email iSDA: ")
-        password = getpass("🔑 Mot de passe iSDA: ")
+
+        # Charger les identifiants depuis .env ou demander interactivement
+        username, password = charger_credentials_isda()
 
         gdf_points = extraire_isda_africa(gdf_points, username, password)
+
+        # Sauvegarde intermédiaire après iSDA
+        print(f"\n💾 Sauvegarde intermédiaire après iSDA Africa...")
+        gdf_points.to_csv(output_csv_path, index=False, sep=',')
+        print(f"  ✓ {output_csv_path}")
 
         # 4. Extraction Cirad Dataverse
         gdf_points = extraire_cirad_dataverse(gdf_points, base_dir)
@@ -614,22 +696,41 @@ def main():
         # 5. Calcul du rapport C/N
         gdf_points = calculer_rapport_cn(gdf_points)
 
+        # Sauvegarde complète avant filtrage
+        print(f"\n💾 Sauvegarde complète (avant filtrage)...")
+        gdf_points.to_csv(output_csv_path, index=False, sep=',')
+        print(f"  ✓ {output_csv_path}")
+        print(f"  ✓ {len(gdf_points)} points avec toutes les propriétés")
+
         # 6. Filtrage des ZONE_PEDO valides
         gdf_points = filtrer_zones_pedo_valides(gdf_points)
+
+        # Sauvegarde après filtrage
+        print(f"\n💾 Sauvegarde après filtrage...")
+        gdf_points.to_csv(output_csv_path, index=False, sep=',')
+        print(f"  ✓ {output_csv_path}")
 
         # 7. Agrégation par ZONE_PEDO
         df_synthese = agreger_par_zone_pedo(gdf_points)
 
-        # 8. Export de la table de synthèse
-        print(f"\n💾 Export de la table de synthèse...")
-        output_csv_path.parent.mkdir(parents=True, exist_ok=True)
+        # 8. Export de la table de synthèse finale
+        print(f"\n💾 Export de la table de synthèse finale...")
         df_synthese.to_csv(output_csv_path, index=False, sep=';')
         print(f"  ✓ {output_csv_path}")
-        print(f"  ✓ {len(df_synthese)} lignes (une par ZONE_PEDO)")
+        print(f"  ✓ {len(df_synthese)} lignes (moyennes par ZONE_PEDO)")
+
+        # Afficher un aperçu des colonnes finales
+        print("\n📋 Colonnes de la table de synthèse:")
+        print(f"  {', '.join(df_synthese.columns.tolist())}")
 
         print("\n" + "=" * 70)
         print("✅ TRAITEMENT TERMINÉ AVEC SUCCÈS")
         print("=" * 70)
+        print("\n📊 Résumé:")
+        print(f"  • Points d'échantillonnage traités: {len(gdf_points)}")
+        print(f"  • ZONE_PEDO distinctes: {len(df_synthese)}")
+        print(f"  • Propriétés extraites: {len(df_synthese.columns) - 1}")
+        print(f"  • Fichier final: {output_csv_path}")
 
     except Exception as e:
         print(f"\n❌ Erreur lors du traitement: {e}")

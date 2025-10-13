@@ -365,11 +365,6 @@ def main():
         print("✅ TRAITEMENT TERMINÉ AVEC SUCCÈS")
         print("=" * 70)
 
-        print("\n📝 Prochaines étapes :")
-        print("  1. Vérifier le shapefile dans QGIS ou autre SIG")
-        print("  2. Intégrer ilots.shp dans le module agricole MAELIA")
-        print("  3. Le fichier est prêt pour la simulation")
-
     except Exception as e:
         print(f"\n❌ Erreur lors du traitement : {e}")
         import traceback
