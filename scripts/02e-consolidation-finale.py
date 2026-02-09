@@ -371,6 +371,9 @@ def main():
         except Exception as e:
             print(f"  ⚠️  Visualisation ignorée : {e}")
 
+        # ajouter colonne PRO_OC
+        gdf_fusion['PRO_OC'] = 60
+
         # 7. Sauvegarder le shapefile final
         print("\n" + "="*70)
         print("SAUVEGARDE")
