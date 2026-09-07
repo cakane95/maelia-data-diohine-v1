@@ -24,7 +24,7 @@ warnings.filterwarnings('ignore')
 # ============================================================================
 # CONSTANTES
 # ============================================================================
-ID_ZONE_HYDRO = 1  # Identifiant de la zone hydrographique
+ID_ZONE_HYDRO = "SSM1"  # Identifiant de la zone hydrographique
 
 
 # ============================================================================
